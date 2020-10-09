@@ -5,6 +5,7 @@ const passport = require('../config/passport');
 const randomstring = require('randomstring');
 const user = require('../models/user');
 const mailer = require('../misc/mailer');
+// const authRole = require ("../models/permissons")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -97,4 +98,13 @@ module.exports = function(app) {
       });
     }
   });
+
+  // app.get("/dashboard", (req,res) => {
+  //  res.send("dashboard page")
+  // })
+
+
+  // app.get("/myprofile", authRole(User.uniqueID), (req,res) => {
+  //   res.send("profile page")
+  // })
 };
