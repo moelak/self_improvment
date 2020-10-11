@@ -3,8 +3,10 @@ const db = require('../models');
 const passport = require('../config/passport');
 //rendom String
 const randomstring = require('randomstring');
-const user = require('../models/user');
+const User = require('../models/user');
+const WriteStory = require('../models/writeStory');
 const mailer = require('../misc/mailer');
+const isAuthenticated = require('../config/middleware/isAuthenticated');
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -17,7 +19,6 @@ module.exports = function(app) {
       id: req.user.id,
     });
   });
-
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
@@ -53,7 +54,7 @@ module.exports = function(app) {
           html
         );
 
-        res.redirect(307, '/api/login');
+        res.redirect('/login');
       })
       .catch(err => {
         res.status(401).json(err);
@@ -72,7 +73,7 @@ module.exports = function(app) {
     ).then(function(result) {
       console.log(result);
 
-      res.redirect(307, '/api/login');
+      res.redirect('/login');
     });
   });
 
@@ -82,7 +83,7 @@ module.exports = function(app) {
     res.redirect('/');
   });
 
-  // Route for getting some data about our user to be used client side
+  // get individual user
   app.get('/api/user_data', (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
@@ -93,8 +94,56 @@ module.exports = function(app) {
       res.json({
         anonymousName: req.user.anonymousName,
         age: req.user.age,
-        id: req.user.id,
+        UserUuid:req.user.uuid,
       });
     }
   });
+
+//create a Post 
+  app.post('/api/writeStory',isAuthenticated, (req, res) => {
+ 
+    db.WriteStory.create({
+      story: req.body.story,
+      UserUuid: req.body.userUuid,
+      // id: req.body.storyId
+    }).then(function(results) {
+      return res.status(200).json(results);
+
+    }).catch(err=>{ return res.status(500).send(err.message)});
+  });
+
+
+//Get a post by user_id
+  app.get('/api/writeStory/:user_id', isAuthenticated,(req, res) => {
+    db.WriteStory.findAll({
+      where: {UserUuid:req.params.user_id},
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+ 
+//Get all post
+  app.get('/api/writeStory', isAuthenticated,(req, res) => {
+    db.WriteStory.findAll({
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
+
+
+  // app.delete("/api/writeStory/delete/:story_id", function(req, res) {
+  //   console.log("------story ID:-----------------");
+  //   console.log(req.params.story_id);
+  //   db.WriteStory.destroy({
+  //     where: {
+  //       id: req.params.story_id
+  //     }
+  //   }).then(function() {
+  //     res.end();
+  //   });
+  // });
+
+
+
 };
