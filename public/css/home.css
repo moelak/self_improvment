@@ -1,0 +1,135 @@
+body {
+    background-color: rgb(113,218,211);
+}
+
+/*Page Text Styling */
+#logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+    color: rgb(113,218,211);
+}
+
+#cap {
+    /* font-family: 'Varela Round', sans-serif; */
+    font-family: 'Amatic SC', cursive;
+    font-size: 35px;
+    color: white;
+}
+
+
+/* Nav Bar Styling */
+.nav-link {
+    font-family: 'Amatic SC', cursive;
+    color: rgb(113,218,211);
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.nav-link:hover,
+.nav-link-active,
+.nav-link:visited {
+    font-family: 'Amatic SC', cursive;
+    color: grey !important;
+    font-weight: bolder;
+    font-size: 25px;
+
+}
+
+
+/* Featured Card */
+
+.display-4 {
+    font-family: 'Pacifico', cursive;
+    color: rgb(113,218,211);
+}
+
+.jumbo {
+    background-color: grey;
+}
+
+
+#storyWeek {
+    /* font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: pink;
+    font-weight: bolder; */
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    margin-left: 80px;
+
+}
+
+
+#storyWeek:hover,
+#storyWeek-active,
+#storyWeek:visited {
+    /* font-family: 'Amatic SC', cursive;
+    color: rgb(255, 164, 178) !important;
+    font-weight: bolder;
+    font-size: 21px; */
+    font-family: 'Amatic SC', cursive;
+    color:aquamarine !important;
+    font-weight: bolder;
+    font-size: 21px;
+
+}
+
+
+/* Story Cards */
+
+.card-title {
+    font-family: 'Pacifico', cursive;
+    color:aquamarine !important;
+
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.card-text {
+    font-family: 'Amatic SC', cursive;
+    color: white !important;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.card {
+    background-color: lightgray;
+}
+
+
+/* Story Cards Buttons */
+
+#storyCards {
+    /* font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: pink;
+    font-weight: bolder; */
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    margin-right: 70px;
+ 
+}
+
+
+#storyCards:hover,
+#storyCards-active,
+#storyCards:visited {
+    /* font-family: 'Amatic SC', cursive;
+    color: rgb(255, 164, 178) !important;
+    font-weight: bolder;
+    font-size: 21px; */
+    font-family: 'Amatic SC', cursive;
+    color:rgb(113,218,211) !important;
+    font-weight: bolder;
+    margin-right: 70px;
+    /* font-size: 21px; */
+
+}
+
+.jumbotron {
+    background-color: lightgray;
+}
