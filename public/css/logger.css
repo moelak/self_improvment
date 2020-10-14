@@ -1,0 +1,89 @@
+form.signup,
+form.login {
+  margin-top: 50px;
+}
+
+/*Page Text Styling */
+#logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: rgb(113,218,211);
+}
+
+#cap {
+  /* font-family: 'Varela Round', sans-serif; */
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
+  color: white;
+}
+
+/* Nav Bar Styling */
+.nav-link {
+  font-family: 'Amatic SC', cursive;
+  color: rgb(113,218,211);
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.nav-link:hover,
+.nav-link-active,
+.nav-link:visited {
+  font-family: 'Amatic SC', cursive;
+  color: grey !important;
+  font-weight: bolder;
+  font-size: 25px;
+
+}
+
+
+
+/*Fourm Page Text Styling */
+#logins {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: rgb(113,218,211);
+}
+
+#emailz {
+  font-family: 'Amatic SC', cursive;
+  color: grey !important;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#changer{
+  font-family: 'Amatic SC', cursive;
+  color: grey !important;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+/* Form Page Button Styling */
+#submitMe {
+  font-family: 'Amatic SC', cursive;
+  background-color: white !important;
+  color: rgb(113,218,211) !important;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+#submitMe:hover,
+#submitMe-active,
+#submitMe:visited {
+  font-family: 'Amatic SC', cursive;
+  color:rgb(113,218,211) !important;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+
+/* Set a background image by replacing the URL below */
+body {
+  background:  background-color: lightgray;
+
+}
+
+
+/* Login & Signup Forms */

@@ -3,14 +3,22 @@ $(document).ready(() => {
   const loginForm = $("form.login");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
+  console.log(loginForm);
 
   // When the form is submitted, we validate there's an email and password entered
-  loginForm.on("submit", event => {
+  $(document).on("submit","form.login", event => {
     event.preventDefault();
+    console.log("testing");
     const userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
+    console.log(
+			userData.email,
+			"",
+			userData.password,
+			""
+		);
 
     if (!userData.email || !userData.password) {
       return;

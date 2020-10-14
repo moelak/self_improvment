@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/profile.css" />
+		<script src="jquery-3.5.1.min.js"></script>
+		<title>Mindful</title>
+
+		
+	</head>
+	<body>
+		<!-- WEBSITES NAVBAR  -->
+		<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
+			<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<a class="nav-link" href="index.html">Log Out</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="home.html">Stories</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="profile.html"
+							>Profile<span class="sr-only">(current)</span></a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- MOBILE NAVBAR -->
+
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+
+		<!-- Jumbotron-->
+	<div class="container">
+		<div class="jumbotron jumbotron-fluid jumbo-height">
+			<div class="container">
+				<h1 id="myName" class="display-3"><strong>Will Rodgers</strong></h1>
+				<br>
+
+			
+				<img
+					src="./css/japan.jpeg"
+					class="rounded-circle img-size img-fluid"
+				/>
+				<br>
+				<br>
+				<p class="lead">
+					Bio: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+					odio animi rerum deserunt asperiores repellat sequi ut debitis vel,
+					minima ex alias earum quasi beatae! Tempora accusamus earum totam,
+					quisquam quod eius amet illo placeat ad soluta delectus quia ut
+					maiores enim! Exercitationem, ea obcaecati.
+				</p>
+			
+				<br>
+				<br>
+
+
+				<a id="jumboBtn1" class="btn-primary btn-lg" href="#" role="button">My Stories</a>
+				<a id="jumboBtn2" class="btn-primary btn-lg" href="#" role="button">My Mentors</a>
+				<a id="jumboBtn3" class="btn-primary btn-lg" href="#" role="button">My Books</a>
+			</div>
+	</div>
+
+	
+
+
+
+<div class="container">
+	<div class="card border-0 shadow my-5">
+		<div class="card-body p-5">
+			<h1 class="display-4">New Story</h1>
+			<form>
+				<div class="form-group">
+					<label  id="texting" for="exampleFormControlInput1">Title</label>
+					<input
+						type="email"
+						class="form-control"
+						id="exampleFormControlInput1"
+						placeholder="Title"
+					/>
+				</div>
+
+				<div class="form-group">
+					<label id="texting" for="exampleFormControlTextarea1">Write your story</label>
+					<textarea
+						class="form-control"
+						id="exampleFormControlTextarea1"
+						rows="3"
+					></textarea>
+				</div>
+			</form>
+
+			<br />
+				<div class="col text-center">
+					<a class="btn-primary btn-lg" href="#" role="button">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="display-4">My Story #1</h1>
+			<p class="lead">
+				<br>
+				Story: (Your Personal Stories Will Appear Here) Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+				odio animi rerum deserunt asperiores repellat sequi ut debitis vel,
+				minima ex alias earum quasi beatae! Tempora accusamus earum totam,
+				quisquam quod eius amet illo placeat ad soluta delectus quia ut
+				maiores enim! Exercitationem, ea obcaecati.
+			</p>
+			<hr class="my-4" />
+			<a class="btn-primary btn-lg" href="#" role="button">Full Story</a>
+		</div>
+
+<br>
+<br>		
+
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-4">My Story #2</h1>
+		<p class="lead">
+			<br>
+			Story: (Your Personal Stories Will Appear Here) Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+			odio animi rerum deserunt asperiores repellat sequi ut debitis vel,
+			minima ex alias earum quasi beatae! Tempora accusamus earum totam,
+			quisquam quod eius amet illo placeat ad soluta delectus quia ut
+			maiores enim! Exercitationem, ea obcaecati.
+		</p>
+		<hr class="my-4" />
+		<a class="btn-primary btn-lg" href="#" role="button">Full Story</a>
+	</div>
+
+	</body>
+
+	<br />
+	<br />
+</html>
