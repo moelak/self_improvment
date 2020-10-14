@@ -1,66 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Passport Authentication</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+	<head>
+		<title>Mindful-Sign Up</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link href="css/logger.css" rel="stylesheet" />
+</head>
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
-      </div>
+<body>
+		<!-- WEBSITES NAVBAR  -->
+		<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
+			<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<!-- <a class="nav-link" href="index.html">Log In</a> -->
+					</li>
+					<li class="nav-item active">
+						<!-- <a class="nav-link" href="home.html">Stories<span class="sr-only">(current)</span></a> -->
+					</li>
+					<li class="nav-item">
+						<!-- <a class="nav-link" href="profile.html">Profile</a> -->
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- MOBILE NAVBAR -->
+
+		<!-- <script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+    ></script> -->
+    
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
     </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h2>Sign Up Form</h2>
+          <h2 id="logins">Sign Up Form</h2>
           <form class="signup">
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+
+			</div>
+            <div class="form-group">
+              <label  for="exampleInput userName1" aria-required="true">Anonymous Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userName"
+				placeholder="Create a user name"
+				aria-describedby="inputGroupPrepend" required
+              />
+
+			<br>
+
+              <label  for="exampleInputEmail1">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="email-input"
-                placeholder="Email"
+                id="email"
+				placeholder="Enter your email"
+				aria-describedby="inputGroupPrepend" required
               />
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label  for="exampleInputPassword1">Password</label>
               <input
                 type="password"
                 class="form-control"
-                id="password-input"
-                placeholder="Password"
-              />
-            </div>
+                id="passwordInput"
+				placeholder="Create a password"
+				aria-describedby="inputGroupPrepend" required
+			  />
+
+			</div>
+            <div class="form-group">
+              <label  for="exampleInputPassword2">Verify Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="secondPassword"
+				placeholder="Verify your password"
+				aria-describedby="inputGroupPrepend" required
+			  />
+			
+
+			</div>
+            <div class="form-group">
+              <label  for="exampleInputPassword2">Enter Your Age</label>
+			  <input 
+			  type="number" 
+			  class="form-control"
+			  id="age-input"  
+			  value="100" 
+			  min="1" 
+			  max="100" 
+			  step="1"
+			  aria-describedby="inputGroupPrepend" required
+			  />
+
+			  <br>
+
+			  <div class="form-check">
+				<input 
+				type="checkbox" 
+				class="form-check-input" 
+				id="policyInput"
+				aria-describedby="inputGroupPrepend" required
+				>
+        <label class="form-check-label" for="exampleCheck1"></label>
+        <div><a href="./profile.html">Terms and Conditions</a></div>
+				
+			  </div>
+
+<br>
+
+
             <div
               style="display: none"
               id="alert"
               class="alert alert-danger"
               role="alert"
-            >
+			>
+			
               <span
                 class="glyphicon glyphicon-exclamation-sign"
                 aria-hidden="true"
               ></span>
               <span class="sr-only">Error:</span> <span class="msg"></span>
             </div>
-            <button type="submit" class="btn btn-default">Sign Up</button>
-          </form>
-          <br />
-          <p>Or log in <a href="/login">here</a></p>
+            <!-- <a id="submitMe" type="submit" class="btn-primary btn-sm" href="#" role="button">Sign Up</a> -->
+			<button id="submitMe" type="submit" class="btn-default btn-sm" role="button" href="#" >Sign Up</button>
+		</form>
+		<br>
+		<br>
+          <p id="changer">Or log in <a href="./login.html">here</a></p>
         </div>
       </div>
-    </div>
+	</div>
+	<br>
+	<br>
+	<br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/signup.js"></script>
-  </body>
+	</body>
 </html>

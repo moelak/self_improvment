@@ -20,6 +20,11 @@
 
     <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
     <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet" />
+    <style>
+      div#displayStory {
+    padding-left: 30px;
+}
+    </style>
   </head>
 
   <body>
@@ -47,9 +52,13 @@
           <div id="toolbar"></div>
           <div id="editor"></div>
         </div>
-        <button id="savetext">Save Button</button>
+        <button id="savetext">Submite </button>
+        <button id="updateText">Save </button>
       </div>
-      <div id="displayStory"></div>
+      <div id="displayStory">
+       
+      </div>
+
     </div>
 
     <script>
@@ -84,34 +93,36 @@
       $('#savetext').click(event => {
    
      var content = document.querySelector('.ql-editor').innerHTML;
-
+   
 
 event.preventDefault();
 const storyData = {
   story: content,
 };
 
-submitStory(storyData.story, userUuid);
+submitStory(storyData.story, userUuid, data.anonymousName);
        
       });
     });
 
       // Does a post to the signup route. If successful, we are redirected to the members page
       // Otherwise we log any errors
-      function submitStory(story, userUuid) {
-        console.log("ready to post", userUuid, story);
+      function submitStory(story, userUuid,anonymousName) {
+        console.log("ready to post------------------>", userUuid, story,anonymousName );
         // debugger;
+
 
         $.post(`/api/writeStory`, {
           story: story,
-          userUuid:userUuid
+          userUuid:userUuid,
+          anonymousName:anonymousName
+
         })
           .then((display) => {
             // debugger;
             window.location.replace('/writeStory');
-            // console.log(display.UserId)
 
-            // displayStory(userId);
+            // location.reload();
             //  document.querySelector('.ql-editor').innerHTML = ""
           })
           .catch(handleLoginErr);
@@ -120,31 +131,87 @@ submitStory(storyData.story, userUuid);
 
 
 function displayStory(userUuid){
- $.get(`/api/writeStory/${userUuid}`).then(data => {
 
-  $.each(data, function(i,item){
-    
- var editBtn= $(`<button data-edit='1'>Edit</button>`);
- var delBtn =$(`<button data-delete='1'>Delete</button>`);
-   
-          var html =   $.parseHTML( item.story);
-          $('#displayStory').append( html );
-          $('#displayStory').append(editBtn);
-          $('#displayStory').append(delBtn);
 
-  })
-          
-        });
+  $.get(`/api/writeStory/${userUuid}`).then(data => {
+
+$.each( data, function( key, value ) {
+
+  var editBtn= $(`<button class="edit" data-edit='${value.id}'>Edit</button>`);
+ var delBtn =$(`<button class="delete" data-delete='${value.id}'>Delete</button>`);
+ var pubBtn =$(`<button class="publish" data-publish='${value.id}'>Publish</button>`);
+
+    $( '<div class="storyList" style="border: 3px solid; padding: 20px; width: 50%; margin-top: 20px;">' ).appendTo( "#displayStory" ).append(value.story).append(editBtn).append(delBtn).append(pubBtn);
+
+});
+
+      });
 }
 
 
 
+$(document).on('click', '.delete',function (e){
+  e.preventDefault();
+
+    var id = $(this).data("delete");
+    
+
+    // Send the DELETE request.
+    $.ajax("/api/writeStory/delete/" + id, {
+      type: "DELETE"
+    }).then(
+      function() {
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+
+  $(document).on('click', '.edit',function (e){
+   e.preventDefault();
+   var id = $(this).data("edit");
+   console.log(id);
+   var htmldata;
+   $.get(`/api/writeStory/show/`+id).then(data => {
+
+    htmldata= data[0].story;
+
+    // console.log(typeof htmldata);
+    
+    document.querySelector('.ql-editor').innerHTML= htmldata;
+
+    editing(id);
+ 
+     });
+
+  });
+
+
+
+
+  function editing(id){
+    $(document).on('click', '#updateText',function (e){
+   e.preventDefault();
+
+var content2 = document.querySelector('.ql-editor').innerHTML;
+
+  $.post(`/api/writeStory/show/${id}`, {
+          story: content2,
+        })
+          .then((display) => {
+            // debugger;
+            window.location.replace('/writeStory');
+           
+          })
+
+        });
+  }
 
 
       function handleLoginErr(err) {
         console.log('Error......');
       }
     </script>
-    <script type="text/javascript" src="js/signup.js"></script>
   </body>
 </html>

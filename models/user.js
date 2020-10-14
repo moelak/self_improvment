@@ -77,6 +77,8 @@ module.exports = function(sequelize, DataTypes) {
     User.hasMany(models.WriteStory);
   }
 
+ 
+
 
   return User;
 };
