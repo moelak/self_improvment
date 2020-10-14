@@ -40,13 +40,19 @@ body {
 
 .display-4 {
     font-family: 'Pacifico', cursive;
-    color: rgb(113,218,211);
+    color: aquamarine;
 }
 
 .jumbo {
     background-color: grey;
 }
 
+#storyWeekText {
+    font-family: 'Amatic SC', cursive;
+    color: white !important;
+    font-weight: bolder;
+    font-size: 24px;
+}
 
 #storyWeek {
     /* font-family: 'Amatic SC', cursive;
@@ -109,7 +115,7 @@ body {
     background-color: white !important;
     color: grey !important;
     font-weight: bolder;
-    margin-right: 70px;
+    margin-right: 0px;
  
 }
 
@@ -124,7 +130,7 @@ body {
     font-family: 'Amatic SC', cursive;
     color:grey !important;
     font-weight: bolder;
-    margin-right: 70px;
+    margin-right: 0px;
     /* font-size: 21px; */
 
 }
@@ -132,4 +138,3 @@ body {
 .jumbotron {
     background-color: lightgray;
 }
-
