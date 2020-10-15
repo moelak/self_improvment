@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require('../models');
 const passport = require('../config/passport');
+
 //rendom String
 const randomstring = require('randomstring');
 const User = require('../models/user');
@@ -42,7 +43,7 @@ module.exports = function(app) {
         Token: <strong>${result.secretToken}</strong>
         <br>
         On teh following page:
-        <a href="http://localhost:8080/api/verify">http://localhost:8080/api/verify</a>
+        <a href="http://localhost:8080/verify">http://localhost:8080/verify</a>
         `;
 
         //Send an email
@@ -70,11 +71,11 @@ module.exports = function(app) {
       {
         where: { secretToken: req.body.secretToken },
       }
-    ).then(function(result) {
-      console.log(result);
-
-      res.redirect('/login');
-    });
+    ).then(() => {
+ 
+      res.redirect('/');
+      
+    }).catch(err=>{ return res.status(500).send(err.message)});
   });
 
   // Route for logging user out
@@ -99,21 +100,34 @@ module.exports = function(app) {
     }
   });
 
+//get all user
+  app.get('/api/admin/all_user', (req, res) => {
+   
+    db.User.findAll({
+    }).then(function(results) {
+      // console.log("/.............",User.active,".............//");
+      res.json(results);
+    });
+  });
+
+  
+
 //create a Post 
   app.post('/api/writeStory',isAuthenticated, (req, res) => {
- 
+//  console.log(req.body.anonymousName, "--------------------------///////////////")
     db.WriteStory.create({
       story: req.body.story,
       UserUuid: req.body.userUuid,
-      // id: req.body.storyId
+      anonymousName:req.body.anonymousName
     }).then(function(results) {
+      console.log(results)
       return res.status(200).json(results);
 
     }).catch(err=>{ return res.status(500).send(err.message)});
   });
 
 
-//Get a post by user_id
+//Get a Story by user_id
   app.get('/api/writeStory/:user_id', isAuthenticated,(req, res) => {
     db.WriteStory.findAll({
       where: {UserUuid:req.params.user_id},
@@ -123,7 +137,7 @@ module.exports = function(app) {
   });
 
  
-//Get all post
+//Get all Story
   app.get('/api/writeStory', isAuthenticated,(req, res) => {
     db.WriteStory.findAll({
     }).then(function(results) {
@@ -131,19 +145,44 @@ module.exports = function(app) {
     });
   });
 
+  //Get the story by ID
+  app.get('/api/writeStory/show/:story_id', isAuthenticated,(req, res) => {
+    console.log("------story ID:-----------------");
+    console.log(req.params.story_id);
+    db.WriteStory.findAll({ 
+      where:{id: req.params.story_id}
+    }).then(function(results) {
+      res.json(results);
+    });
+  });
 
-  // app.delete("/api/writeStory/delete/:story_id", function(req, res) {
-  //   console.log("------story ID:-----------------");
-  //   console.log(req.params.story_id);
-  //   db.WriteStory.destroy({
-  //     where: {
-  //       id: req.params.story_id
-  //     }
-  //   }).then(function() {
-  //     res.end();
-  //   });
-  // });
+//Delete story
+  app.delete("/api/writeStory/delete/:story_id", function(req, res) {
+    
+    console.log(req.params.story_id);
+    db.WriteStory.destroy({
+      where: {
+        id: req.params.story_id
+      }
+    }).then(function() {
+      res.end();
+    });
+  });
 
+//Edit Story
+
+  app.post('/api/writeStory/show/:story_id', (req, res) => {
+ 
+    db.WriteStory.update({
+        story: req.body.story,
+  }, {
+    where: { id: req.params.story_id },
+    
+  }).then(function(results) {
+      return res.status(200).json(results);
+
+    }).catch(err=>{ return res.status(500).send(err.message)});
+  });
 
 
 };

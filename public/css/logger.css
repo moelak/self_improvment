@@ -7,7 +7,7 @@ form.login {
 #logo {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
-  color: rgb(113,218,211);
+  color: rgb(113, 218, 211);
 }
 
 #cap {
@@ -20,7 +20,7 @@ form.login {
 /* Nav Bar Styling */
 .nav-link {
   font-family: 'Amatic SC', cursive;
-  color: rgb(113,218,211);
+  color: rgb(113, 218, 211);
   font-weight: bolder;
   font-size: 25px;
 }
@@ -32,16 +32,13 @@ form.login {
   color: grey !important;
   font-weight: bolder;
   font-size: 25px;
-
 }
-
-
 
 /*Fourm Page Text Styling */
 #logins {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
-  color: rgb(113,218,211);
+  color: rgb(113, 218, 211);
 }
 
 #emailz {
@@ -51,39 +48,34 @@ form.login {
   font-size: 25px;
 }
 
-#changer{
+#changer {
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
   font-size: 20px;
 }
 
-
 /* Form Page Button Styling */
 #submitMe {
   font-family: 'Amatic SC', cursive;
   background-color: white !important;
-  color: rgb(113,218,211) !important;
+  color: rgb(113, 218, 211) !important;
   font-weight: bolder;
   font-size: 20px;
 }
-
 
 #submitMe:hover,
 #submitMe-active,
 #submitMe:visited {
   font-family: 'Amatic SC', cursive;
-  color:rgb(113,218,211) !important;
+  color: rgb(113, 218, 211) !important;
   font-weight: bolder;
   font-size: 20px;
 }
 
-
 /* Set a background image by replacing the URL below */
 body {
-  background:  background-color: lightgray;
-
+  background-color: lightgray;
 }
-
 
 /* Login & Signup Forms */
