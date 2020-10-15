@@ -13,13 +13,23 @@ module.exports = function(sequelize, DataTypes) {
     anonymousName: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        len: {
+          args: [3, 10],
+          msg: 'The name must contain between 3 and 10 characters.' // Error message I want to display
+        }
+      }
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        isEmail:{
+          arg:true,
+          msg: 'Please provide a valid Email.'
+        }
+        
       },
     },
     // The password cannot be null
@@ -27,7 +37,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        is: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
+        is: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+          
+        
+        // msg: 'A minimum 8 characters password contains a combination of uppercase and lowercase letter and number.'
+
       },
     },
     age: {
@@ -57,7 +71,14 @@ module.exports = function(sequelize, DataTypes) {
 
     active: {
       type: DataTypes.BOOLEAN,
+      validate: {
+        isBoolean:{
+          arg: true,
+          msg: "Incorrect access token"
+        }
+      },
     },
+    
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {

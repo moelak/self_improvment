@@ -31,7 +31,7 @@ form.login {
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 27px;
 }
 
 /*Fourm Page Text Styling */
@@ -41,7 +41,7 @@ form.login {
   color: rgb(113, 218, 211);
 }
 
-#emailz {
+.emailz {
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
@@ -59,9 +59,11 @@ form.login {
 #submitMe {
   font-family: 'Amatic SC', cursive;
   background-color: white !important;
-  color: rgb(113, 218, 211) !important;
+  color: rgb(87 166 161) !important;
   font-weight: bolder;
   font-size: 20px;
+  margin-top: 30px;
+  transition: color 2s;
 }
 
 #submitMe:hover,
@@ -79,3 +81,27 @@ body {
 }
 
 /* Login & Signup Forms */
+.form-control {
+  font-size: 1.7rem;
+}
+
+/* -----Check box ----*/
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 4px;
+}
+
+label.form-check-label {
+  padding-left: 25px;
+}
+
+input[type='checkbox'] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+}
+/* ----Check box---- */

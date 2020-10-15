@@ -31,9 +31,12 @@ module.exports = function(app) {
       age: req.body.age,
       policy: req.body.policy,
       secretToken: randomstring.generate(),
-      active: true,
+      active: false,
     })
       .then(result => {
+        res.redirect('/login');
+
+
         const html = `Hi There,
         <br/>
         Thank you for registring!
@@ -43,7 +46,7 @@ module.exports = function(app) {
         Token: <strong>${result.secretToken}</strong>
         <br>
         On teh following page:
-        <a href="http://localhost:8080/verify">http://localhost:8080/verify</a>
+        <a href="http://localhost:3000/verify">http://localhost:3000/verify</a>
         `;
 
         //Send an email
@@ -55,14 +58,13 @@ module.exports = function(app) {
           html
         );
 
-        res.redirect('/login');
+       
       })
-      .catch(err => {
-        res.status(401).json(err);
-      });
+      .catch(err=>{ return res.status(401).send(err.message)})
   });
 
   app.post('/api/verify', (req, res) => {
+  
     db.User.update(
       {
         active: true,
@@ -71,11 +73,15 @@ module.exports = function(app) {
       {
         where: { secretToken: req.body.secretToken },
       }
-    ).then(() => {
- 
-      res.redirect('/');
+    ).then((value) => {
+      // console.log(value[0]);
+      if(value[0] === 0){
+        console.log(res.status(401).send("Incorrect access token"))
+      }else{
+        res.redirect('/');
+      }
       
-    }).catch(err=>{ return res.status(500).send(err.message)});
+    }).catch(err=>{ return res.status(401).send(err.message)})
   });
 
   // Route for logging user out
@@ -117,8 +123,8 @@ module.exports = function(app) {
 //  console.log(req.body.anonymousName, "--------------------------///////////////")
     db.WriteStory.create({
       story: req.body.story,
+      title: req.body.title,
       UserUuid: req.body.userUuid,
-      anonymousName:req.body.anonymousName
     }).then(function(results) {
       console.log(results)
       return res.status(200).json(results);
@@ -175,6 +181,7 @@ module.exports = function(app) {
  
     db.WriteStory.update({
         story: req.body.story,
+        title:req.body.title
   }, {
     where: { id: req.params.story_id },
     

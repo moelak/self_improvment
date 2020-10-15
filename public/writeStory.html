@@ -49,6 +49,18 @@
       </div>
         <div class="col-md-6 col-md-offset-3">
           <h2>Wriete Story</h2>
+
+          <label  for="exampleInput userName1" aria-required="true">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+    placeholder="Create a user name"
+    aria-describedby="inputGroupPrepend" required
+          />
+<br>
+ <br>
+
           <div id="toolbar"></div>
           <div id="editor"></div>
         </div>
@@ -62,6 +74,10 @@
     </div>
 
     <script>
+
+
+
+
       var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike'],
         ['blockquote'],
@@ -80,6 +96,10 @@
       //------------------------------------------------------------------------------------
       // When the signup button is clicked, we validate the email and password are not blank
 
+
+      const titleInput= $("#title");
+
+
      
       $.get('/api/user_data').then(data => {
 
@@ -93,37 +113,36 @@
       $('#savetext').click(event => {
    
      var content = document.querySelector('.ql-editor').innerHTML;
+  
    
-
+// console.log("Title is: ",titleInput.val().trim());
 event.preventDefault();
 const storyData = {
   story: content,
+  title: titleInput.val().trim(),
 };
 
-submitStory(storyData.story, userUuid, data.anonymousName);
+submitStory(storyData.story, userUuid,storyData.title);
        
       });
     });
 
       // Does a post to the signup route. If successful, we are redirected to the members page
       // Otherwise we log any errors
-      function submitStory(story, userUuid,anonymousName) {
-        console.log("ready to post------------------>", userUuid, story,anonymousName );
+      function submitStory(story, userUuid,title) {
+        console.log("ready to post------------------>", userUuid, story,title );
         // debugger;
 
 
         $.post(`/api/writeStory`, {
           story: story,
+          title:title,
           userUuid:userUuid,
-          anonymousName:anonymousName
 
         })
           .then((display) => {
             // debugger;
             window.location.replace('/writeStory');
-
-            // location.reload();
-            //  document.querySelector('.ql-editor').innerHTML = ""
           })
           .catch(handleLoginErr);
       }
@@ -135,13 +154,15 @@ function displayStory(userUuid){
 
   $.get(`/api/writeStory/${userUuid}`).then(data => {
 
-$.each( data, function( key, value ) {
+    console.log(data, "............title.............")
 
+$.each( data, function( key, value ) {
+ var title= $(`<h3 class="title" data-edit='${value.id}'>${value.title}</h3>`);
   var editBtn= $(`<button class="edit" data-edit='${value.id}'>Edit</button>`);
  var delBtn =$(`<button class="delete" data-delete='${value.id}'>Delete</button>`);
- var pubBtn =$(`<button class="publish" data-publish='${value.id}'>Publish</button>`);
+//  var pubBtn =$(`<button class="publish" data-publish='${value.id}'>Publish</button>`);
 
-    $( '<div class="storyList" style="border: 3px solid; padding: 20px; width: 50%; margin-top: 20px;">' ).appendTo( "#displayStory" ).append(value.story).append(editBtn).append(delBtn).append(pubBtn);
+    $( '<div class="storyList" style="border: 3px solid; padding: 20px; width: 50%; margin-top: 20px;">' ).appendTo( "#displayStory" ).append(title).append(value.story).append(editBtn).append(delBtn);
 
 });
 
@@ -173,13 +194,17 @@ $(document).on('click', '.delete',function (e){
    var id = $(this).data("edit");
    console.log(id);
    var htmldata;
+   var title;
    $.get(`/api/writeStory/show/`+id).then(data => {
 
     htmldata= data[0].story;
 
-    // console.log(typeof htmldata);
+    title= data[0].title;
+    console.log(title);
     
     document.querySelector('.ql-editor').innerHTML= htmldata;
+    // document.querySelector('#title').innerHTML= title;
+    var titled= JSON.stringify($('#title').val($('#title').val() + title));
 
     editing(id);
  
@@ -195,9 +220,13 @@ $(document).on('click', '.delete',function (e){
    e.preventDefault();
 
 var content2 = document.querySelector('.ql-editor').innerHTML;
+var title2 = document.querySelector('#title').value;
+
+console.log("check data type2: ", typeof title2);
 
   $.post(`/api/writeStory/show/${id}`, {
           story: content2,
+          title: title2,
         })
           .then((display) => {
             // debugger;

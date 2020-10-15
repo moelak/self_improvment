@@ -31,6 +31,22 @@
               
               />
             </div>
+            <div
+            style="display: none"
+            id="alert"
+            class="alert alert-danger"
+            role="alert"
+    >
+    
+            <span
+              class="glyphicon glyphicon-exclamation-sign"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Error:</span> 
+            <!-- <span class="msg"></span> -->
+          </div>
+
+
             <button type="submit" id="verifyAccess" class="btn btn-default">Verify</button>
           </form>
         </div>
@@ -42,7 +58,7 @@
      $('#verifyAccess').click(event => {
 
       const tokenInput = $('#tokenInput');
-
+      $( "div" ).remove(".msg");
      event.preventDefault();
 
      const userData = {
@@ -51,17 +67,33 @@
     if (!userData.secretToken) {
       return;
     }
+
     $.post('/api/verify', {
       secretToken: userData.secretToken,
     })
       .then(() => {
-        // window.location.replace('/login');
+        $( "div" ).remove("#alert");
+        window.location.replace('/login');
         // If there's an error, handle it by throwing up a bootstrap alert
-      });
+      }).catch(handleLoginErr);
 
     tokenInput.val('');
      
     });
+
+
+    function handleLoginErr(err) {
+    console.log(err);
+    const errString= err.responseText
+    const errArray= errString.split(',');
+  
+    jQuery.each( errArray, function( i, val ) {
+    
+      $('<div class="msg">').appendTo("#alert").append(val);
+    });
+    $("#alert").fadeIn(500);
+  
+	}
   </script>
   </body>
 </html>

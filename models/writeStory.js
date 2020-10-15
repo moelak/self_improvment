@@ -8,6 +8,9 @@ module.exports = function(sequelize, DataTypes) {
     story: {
       type: DataTypes.TEXT,
     },
+    title: {
+      type: DataTypes.STRING,
+    },
   });
 
   WriteStory.associate = models => {
