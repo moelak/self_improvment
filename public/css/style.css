@@ -58,3 +58,23 @@
   
   
   }
+
+  .myBtn,
+#updateText {
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    font-size: 21px;
+}
+
+.myBtn:hover,
+.myBtn:visited,
+#updateText:hover,
+#updateText-active1,
+#updateText:visited {
+    font-family: 'Amatic SC', cursive;
+    color:aquamarine!important;
+    font-weight: bolder;
+    font-size: 21px;
+}

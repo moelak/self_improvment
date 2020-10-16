@@ -223,7 +223,7 @@ background-color: white
     font-size: 21px;
 }
 
-
+.myBtn,
 #updateText {
     font-family: 'Amatic SC', cursive;
     background-color: white !important;
@@ -232,7 +232,8 @@ background-color: white
     font-size: 21px;
 }
 
-
+.myBtn:hover,
+.myBtn:visited,
 #updateText:hover,
 #updateText-active1,
 #updateText:visited {
@@ -241,3 +242,4 @@ background-color: white
     font-weight: bolder;
     font-size: 21px;
 }
+
