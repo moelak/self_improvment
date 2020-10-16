@@ -3,22 +3,14 @@ $(document).ready(() => {
   const loginForm = $("form.login");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
-  console.log(loginForm);
 
   // When the form is submitted, we validate there's an email and password entered
-  $(document).on("submit","form.login", event => {
+  loginForm.on("submit", event => {
     event.preventDefault();
-    console.log("testing");
     const userData = {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
-    console.log(
-			userData.email,
-			"",
-			userData.password,
-			""
-		);
 
     if (!userData.email || !userData.password) {
       return;
@@ -37,7 +29,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        window.location.replace("/members");
+        window.location.replace("/writeStory");
         // If there's an error, log the error
       })
       .catch(err => {

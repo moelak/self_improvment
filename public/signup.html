@@ -56,40 +56,19 @@
 		</nav>
 		<!-- MOBILE NAVBAR -->
 
-		<!-- <script
-			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"
-		></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-			crossorigin="anonymous"
-    ></script> -->
-    
-
     <br>
     <br>
     <br>
     <br>
-
-
     </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <h2 id="logins">Sign Up Form</h2>
-          <form class="signup">
+          <form class="signup needs-validation" novalidate>
+       
             <div class="form-group">
-
-			</div>
-            <div class="form-group">
-              <label id="emailz" for="exampleInput userName1" aria-required="true">User Name</label>
+              <label  class="emailz"for="exampleInput userName1" aria-required="true">Anonymous Name</label>
               <input
                 type="text"
                 class="form-control"
@@ -98,9 +77,13 @@
 				aria-describedby="inputGroupPrepend" required
               />
 
+              <div class="invalid-feedback">
+                Please provide a name.
+              </div>
+
 			<br>
 
-              <label id="emailz" for="exampleInputEmail1">Email address</label>
+              <label  class="emailz"for="exampleInputEmail1">Email address</label>
               <input
                 type="email"
                 class="form-control"
@@ -110,7 +93,7 @@
               />
             </div>
             <div class="form-group">
-              <label id="emailz" for="exampleInputPassword1">Password</label>
+              <label  for="exampleInputPassword1">Password</label>
               <input
                 type="password"
                 class="form-control"
@@ -121,7 +104,7 @@
 
 			</div>
             <div class="form-group">
-              <label id="emailz" for="exampleInputPassword2">Verify Password</label>
+              <label  class="emailz"for="exampleInputPassword2">Verify Password</label>
               <input
                 type="password"
                 class="form-control"
@@ -133,32 +116,31 @@
 
 			</div>
             <div class="form-group">
-              <label id="emailz" for="exampleInputPassword2">Enter Your Age</label>
+              <label  class="emailz"for="exampleInputPassword2">Enter Your Age</label>
 			  <input 
 			  type="number" 
 			  class="form-control"
 			  id="age-input"  
-			  value="100" 
+			  value="18" 
 			  min="1" 
 			  max="100" 
 			  step="1"
 			  aria-describedby="inputGroupPrepend" required
 			  />
+</div>
 
-			  <br>
-
-			  <div class="form-check">
-				<input 
-				type="checkbox" 
-				class="form-check-input" 
-				id="policyInput"
-				aria-describedby="inputGroupPrepend" required
-				>
-				<label class="form-check-label" for="exampleCheck1">"       "  <a href="./profile.html">Terms and Conditions</a></label>
-				
-			  </div>
-
-<br>
+       
+<div class="form-group">
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="false" id="policyInput" required>
+    <label class="form-check-label" for="invalidCheck">
+      Agree to terms and conditions
+    </label>
+    <div class="invalid-feedback">
+      You must agree before submitting.
+    </div>
+  </div>
+</div>
 
 
             <div
@@ -172,7 +154,8 @@
                 class="glyphicon glyphicon-exclamation-sign"
                 aria-hidden="true"
               ></span>
-              <span class="sr-only">Error:</span> <span class="msg"></span>
+              <span class="sr-only">Error:</span> 
+              <!-- <span class="msg"></span> -->
             </div>
             <!-- <a id="submitMe" type="submit" class="btn-primary btn-sm" href="#" role="button">Sign Up</a> -->
 			<button id="submitMe" type="submit" class="btn-default btn-sm" role="button" href="#" >Sign Up</button>
@@ -188,6 +171,19 @@
 	<br>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+         $("#policyInput").on('change', function() {
+      if ($(this).is(':checked')) {
+        $(this).attr('value', 'true');
+      } else {
+        $(this).attr('value', 'false');     
+      }
+    });
+
+    </script>
+
     <script type="text/javascript" src="js/signup.js"></script>
+
+ 
 	</body>
 </html>

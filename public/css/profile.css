@@ -166,7 +166,7 @@ body {
 
 .display-4 {
     font-family: 'Pacifico', cursive;
-    color: aquamarine;
+    color: black;
 }
 
 
@@ -196,4 +196,17 @@ body {
     font-weight: bolder;
     font-size: 21px;
 
+}
+
+div#editor {
+    height: 300px;
+}
+
+.ql-container {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    height: 100%;
+    margin: 0px;
+    position: relative;
 }

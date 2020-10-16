@@ -7,7 +7,11 @@ form.login {
 #logo {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
+<<<<<<< HEAD
   color: rgb(113,218,211);
+=======
+  color: rgb(113, 218, 211);
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
 }
 
 #cap {
@@ -20,7 +24,11 @@ form.login {
 /* Nav Bar Styling */
 .nav-link {
   font-family: 'Amatic SC', cursive;
+<<<<<<< HEAD
   color: rgb(113,218,211);
+=======
+  color: rgb(113, 218, 211);
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
   font-weight: bolder;
   font-size: 25px;
 }
@@ -31,53 +39,88 @@ form.login {
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
+<<<<<<< HEAD
   font-size: 25px;
 
 }
 
 
 
+=======
+  font-size: 27px;
+}
+
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
 /*Fourm Page Text Styling */
 #logins {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
+<<<<<<< HEAD
   color: rgb(113,218,211);
 }
 
 #emailz {
+=======
+  color: rgb(113, 218, 211);
+}
+
+.emailz {
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
   font-size: 25px;
 }
 
+<<<<<<< HEAD
 #changer{
+=======
+#changer {
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
   font-family: 'Amatic SC', cursive;
   color: grey !important;
   font-weight: bolder;
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
 /* Form Page Button Styling */
 #submitMe {
   font-family: 'Amatic SC', cursive;
   background-color: white !important;
+<<<<<<< HEAD
   color: rgb(113,218,211) !important;
   font-weight: bolder;
   font-size: 20px;
 }
 
 
+=======
+  color: rgb(87 166 161) !important;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-top: 30px;
+  transition: color 2s;
+}
+
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
 #submitMe:hover,
 #submitMe-active,
 #submitMe:visited {
   font-family: 'Amatic SC', cursive;
+<<<<<<< HEAD
   color:rgb(113,218,211) !important;
+=======
+  color: rgb(113, 218, 211) !important;
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc
   font-weight: bolder;
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 
 /* Set a background image by replacing the URL below */
 body {
@@ -87,3 +130,35 @@ body {
 
 
 /* Login & Signup Forms */
+=======
+/* Set a background image by replacing the URL below */
+body {
+  background-color: lightgray;
+}
+
+/* Login & Signup Forms */
+.form-control {
+  font-size: 1.7rem;
+}
+
+/* -----Check box ----*/
+.form-check {
+  position: relative;
+  display: block;
+  padding-left: 4px;
+}
+
+label.form-check-label {
+  padding-left: 25px;
+}
+
+input[type='checkbox'] {
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+}
+/* ----Check box---- */
+>>>>>>> 12ac8518c2078a4db75f2ed1f4c578e3e82fa3fc

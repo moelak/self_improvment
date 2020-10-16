@@ -1,4 +1,63 @@
-form.signup,
-form.login {
-  margin-top: 50px;
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  width: 100%;
+  height: 810px;
+  object-fit: cover;
+  z-index: -100;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/*Page Text Styling */
+#logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  color: rgb(113, 218, 211);
+}
+
+#cap {
+  font-family: 'Amatic SC', cursive;
+  font-size: 35px;
+  color: white;
+}
+
+/* Button Styling */
+#loggers {
+  margin-right: 50%;
+}
+
+.btn-secondary {
+  font-family: 'Amatic SC', cursive;
+  background-color: rgb(113, 218, 211) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary active,
+.btn-secondary:visited {
+  font-family: 'Amatic SC', cursive;
+  background-color: aquamarine !important;
+}
+
+div#editor {
+  height: 300px;
+}
+
+.ql-container {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  height: 100%;
+  margin: 0px;
+  position: relative;
 }

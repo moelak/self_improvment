@@ -7,9 +7,10 @@ $(document).ready(() => {
 	const passwordInput = $("#passwordInput");
 	const secondPasssword = $("#secondPassword");
 	const policy = $("#policyInput");
-	console.log(signUpForm);
+
 	// When the signup button is clicked, we validate the email and password are not blank
-	$(document).on("submit","form.signup", (event) => {
+	signUpForm.on("submit", (event) => {
+		$("div").remove(".msg");
 		event.preventDefault();
 		console.log("testing");
 		const userData = {
@@ -35,54 +36,67 @@ $(document).ready(() => {
 			userData.policy,
 			""
 		);
-		if (
-			!userData.email ||
-			!userData.ageInput ||
-			!userData.userName ||
-			!userData.passwordInput ||
-			!userData.secondPasssword ||
-			!userData.policy
-		) {
-			return;
-		}
-		// If we have an email and password, run the signUpUser function
+
 		signUpUser(
 			userData.email,
 			userData.password,
-			userData.ageInput,
-			userData.userName,
-			userData.passwordInput,
 			userData.secondPasssword,
+			userData.userName,
+			userData.ageInput,
 			userData.policy
 		);
-		emailInput.val("");
-    passwordInput.val("");
-    secondPasssword.val("");
-    userName.val("");
-    ageInput.val("");
-    policy.val("");
+		// emailInput.val("");
+		passwordInput.val("");
+		secondPasssword.val("");
+		// userName.val("");
+		// ageInput.val("");
+		// policy.val("");
 	});
 	// dont post second password, needs all input feilds compleated
 
 	// Does a post to the signup route. If successful, we are redirected to the members page
 	// Otherwise we log any errors
-	function signUpUser(email, password) {
-		$.post("/api/signup", {
-			email: email,
-      password: password,
-      secondPasssword: secondPasssword,
-      ageInput: ageInput,
-      userName: userName,
-		})
-			.then(() => {
-				window.location.replace("/members");
-				// If there's an error, handle it by throwing up a bootstrap alert
+	function signUpUser(
+		email,
+		password,
+		secondPasssword,
+		userName,
+		ageInput,
+		policyVal
+	) {
+		if (password !== secondPasssword) {
+			$('<div class="msg test">')
+				.appendTo("#alert")
+				.html("<p>Those passwords didn't match. Try again.</p>");
+			$("#alert").fadeIn(500);
+			console.log("bowwwwww");
+		} else {
+			$.post("/api/signup", {
+				email: email,
+				password: password,
+				age: parseInt(ageInput),
+				anonymousName: userName,
+				policy: policyVal,
 			})
-			.catch(handleLoginErr);
+				.then(() => {
+					$("div").remove("#alert");
+					window.location.replace("/verify");
+					// If there's an error, handle it by throwing up a bootstrap alert
+				})
+				.catch(handleLoginErr);
+		}
 	}
 
 	function handleLoginErr(err) {
-		$("#alert .msg").text(err.responseJSON);
+		console.log(err);
+		const errString = err.responseText;
+		const errArray = errString.split(",");
+
+		jQuery.each(errArray, function(i, val) {
+			$('<div class="msg">')
+				.appendTo("#alert")
+				.append(val);
+		});
 		$("#alert").fadeIn(500);
 	}
 });

@@ -1,150 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Passport Authentication</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
-    <link href="css/style.css" rel="stylesheet" />
+	<head>
+		<title>Passport Authentication</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+		/>
+		<!-- <link href="css/style.css" rel="stylesheet" /> -->
+		<link rel="stylesheet" href="./css/profile.css" />
 
-    <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-      crossorigin="anonymous"
-    ></script>
+		<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+		<script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"
+		></script>
 
-    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
-    <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet" />
-  </head>
+		<!-- new-->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- new -->
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/logout">
-            Logout
-          </a>
+		<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+		<link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet" />
+		<style>
+			div#displayStory {
+				padding-left: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- new -->
+		<!-- WEBSITES NAVBAR  -->
+		<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
+			<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<a class="nav-link" href="index.html">Log Out</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/story">Stories</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/writeStory"
+							>Profile<span class="sr-only">(current)</span></a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- MOBILE NAVBAR -->
+
+		<!-- <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"
+></script> -->
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<!-- Jumbotron-->
+		<div class="container">
+			<div class="jumbotron jumbotron-fluid jumbo-height">
+				<div class="container">
+					<h1 id="myName" class="display-3">
+						Welcome <span class="member-name"></span>
+					</h1>
+					<!-- <h4 id="whatsMyageAgain">Your Age is: <span class="member-age"></span></h4> -->
+					<br />
+
+					<img
+						src="./css/japan.jpeg"
+						class="rounded-circle img-size img-fluid"
+					/>
+					<br />
+					<br />
+					<p class="lead">
+						Rules: Welcome to Mindful, "The smart space for social media!" This
+						website is meant as a safe and expresive way for users to share
+						information and stories that will help others live an abundant and
+						sucessful life. Please write stories and share your thoughts.
+						Remember, there is no tolerance for hateful or offensive speech, all
+						post containing such, will be removed.
+					</p>
+
+					<br />
+					<br />
+
+					<a id="jumboBtn1" class="btn-primary btn-lg" href="#" role="button"
+						>Profile Pic</a
+          >
         </div>
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="row">
-
-
-        <div class="col-md-6 col-md-offset-3">
-          <h1>Welcome <span class="member-name"></span></h1>
-          <!-- <h4>Your Age is: <span class="member-age"></span></h4> -->
         </div>
-      </div>
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Wriete Story</h2>
-          <div id="toolbar"></div>
-          <div id="editor"></div>
-        </div>
-        <button id="savetext">Save Button</button>
-      </div>
-      <div id="displayStory"></div>
-    </div>
 
-    <script>
-      var toolbarOptions = [
-        ['bold', 'italic', 'underline', 'strike'],
-        ['blockquote'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ indent: '-1' }, { indent: '+1' }],
-        [{ color: [] }, { background: [] }],
-      ];
+					<!-- new -->
+					<!-- new -->
 
-      var quill = new Quill('#editor', {
-        modules: {
-          toolbar: toolbarOptions,
-        },
-
-        theme: 'snow',
-      });
-      //------------------------------------------------------------------------------------
-      // When the signup button is clicked, we validate the email and password are not blank
-
-     
-      $.get('/api/user_data').then(data => {
-
-        $('.member-name').text(data.anonymousName);
-       $('.member-age').text(data.age);
-
-
-         var userUuid= data.UserUuid
-         displayStory(userUuid);
-     
-      $('#savetext').click(event => {
-   
-     var content = document.querySelector('.ql-editor').innerHTML;
-
-
-event.preventDefault();
-const storyData = {
-  story: content,
-};
-
-submitStory(storyData.story, userUuid);
-       
-      });
-    });
-
-      // Does a post to the signup route. If successful, we are redirected to the members page
-      // Otherwise we log any errors
-      function submitStory(story, userUuid) {
-        console.log("ready to post", userUuid, story);
-        // debugger;
-
-        $.post(`/api/writeStory`, {
-          story: story,
-          userUuid:userUuid
-        })
-          .then((display) => {
-            // debugger;
-            window.location.replace('/writeStory');
-            // console.log(display.UserId)
-
-            // displayStory(userId);
-            //  document.querySelector('.ql-editor').innerHTML = ""
-          })
-          .catch(handleLoginErr);
-      }
-
-
-
-function displayStory(userUuid){
- $.get(`/api/writeStory/${userUuid}`).then(data => {
-
-  $.each(data, function(i,item){
-    
- var editBtn= $(`<button data-edit='1'>Edit</button>`);
- var delBtn =$(`<button data-delete='1'>Delete</button>`);
-   
-          var html =   $.parseHTML( item.story);
-          $('#displayStory').append( html );
-          $('#displayStory').append(editBtn);
-          $('#displayStory').append(delBtn);
-
-  })
+					<div class="container">
+				<div class="jumbotron">
+						<h2 id="newBook" class="display-4">New Story</h2>
+						<form>
+              <br>
+					<div class="form-group">
+            <label for="exampleInput userName1" aria-required="true">Title</label>
+            <input
+						type="text"
+						class="form-control"
+						id="title"
+						placeholder="Create a user name"
+						aria-describedby="inputGroupPrepend"
+						required
+					/>
+					<br />
+  
           
-        });
-}
+
+							</div>
+			
+							<div class="form-group">
+					  <label id="texting" for="exampleFormControlTextarea1">Write your story</label>
+					</div>
+					<div class="col-md-13 col-md-offset-0">
+					  <div id="toolbar"></div>
+					  <div id="editor"></div>
+					</div>
+			
+						</form>
+			
+						<br />
+					<div class="col text-center">
+					<button class="btn-default btn-lg" href="#" role="button" id="savetext">Submit </button>
+					<button class="btn-default btn-lg" href="#" role="button" id="updateText">Save </button>
+        </div>
+
+					<!-- new -->
+
+
+				</div>
+				<!-- <div class="col-md-6 col-md-offset-3">
+					<h2>Wriete Story</h2>
+
+					<label for="exampleInput userName1" aria-required="true">Title</label>
+					<input
+						type="text"
+						class="form-control"
+						id="title"
+						placeholder="Create a user name"
+						aria-describedby="inputGroupPrepend"
+						required
+					/>
+					<br />
+					<br /> -->
+
+					<!-- <div id="toolbar"></div>
+					<div id="editor"></div>
+				</div>
+				<button id="savetext">Submite</button>
+				<button id="updateText">Save</button>
+			</div> -->
+			<div id="displayStory"></div>
+		</div>
+
+		<script>
+			var toolbarOptions = [
+				["bold", "italic", "underline", "strike"],
+				["blockquote"],
+				[{ list: "ordered" }, { list: "bullet" }],
+				[{ indent: "-1" }, { indent: "+1" }],
+				[{ color: [] }, { background: [] }],
+			];
+
+			var quill = new Quill("#editor", {
+				modules: {
+					toolbar: toolbarOptions,
+				},
+
+				theme: "snow",
+			});
+			//------------------------------------------------------------------------------------
+			// When the signup button is clicked, we validate the email and password are not blank
+
+			const titleInput = $("#title");
+
+			$.get("/api/user_data").then((data) => {
+				$(".member-name").text(data.anonymousName);
+				$(".member-age").text(data.age);
+
+				var userUuid = data.UserUuid;
+				displayStory(userUuid);
+
+				$("#savetext").click((event) => {
+					var content = document.querySelector(".ql-editor").innerHTML;
+
+					// console.log("Title is: ",titleInput.val().trim());
+					event.preventDefault();
+					const storyData = {
+						story: content,
+						title: titleInput.val().trim(),
+					};
+
+					submitStory(storyData.story, userUuid, storyData.title);
+				});
+			});
+
+			// Does a post to the signup route. If successful, we are redirected to the members page
+			// Otherwise we log any errors
+			function submitStory(story, userUuid, title) {
+				console.log("ready to post------------------>", userUuid, story, title);
+				// debugger;
+
+				$.post(`/api/writeStory`, {
+					story: story,
+					title: title,
+					userUuid: userUuid,
+				})
+					.then((display) => {
+						// debugger;
+						window.location.replace("/writeStory");
+					})
+					.catch(handleLoginErr);
+			}
+
+			function displayStory(userUuid) {
+				$.get(`/api/writeStory/${userUuid}`).then((data) => {
+					console.log(data, "............title.............");
+
+					$.each(data, function(key, value) {
+						var title = $(
+							`<h3 class="title" data-edit='${value.id}'>${value.title}</h3>`
+						);
+						var editBtn = $(
+							`<button class="edit" data-edit='${value.id}'>Edit</button>`
+						);
+						var delBtn = $(
+							`<button class="delete" data-delete='${value.id}'>Delete</button>`
+						);
+            
+            var container = $('<div class="container">');
+						var jumbo = $('<div class="jumbotron">');
+						var title = $('<h3 id="story2" class="display-4">').text(
+							value.title
+						);
+						var text = $('<p class="lead">').text(value.story);
+						var br = $("<br>");
+						var hr = $('<hr class="my-4" />');
+						var col = $('<div class="col text-center">');
+      console.log(text,'++++++++++++')
+
+						col.append(editBtn, delBtn);
+						jumbo.append(title, hr, br, value.story, col);
+						container.append(jumbo);
+						$("#displayStory").append(container);
 
 
 
 
 
-      function handleLoginErr(err) {
-        console.log('Error......');
-      }
-    </script>
-    <script type="text/javascript" src="js/signup.js"></script>
-  </body>
+						// $(
+						// 	'<div class="storyList" style="border: 3px solid; padding: 20px; width: 50%; margin-top: 20px;">'
+						// )
+						// 	.appendTo("#displayStory")
+						// 	.append(title)
+						// 	.append(value.story)
+						// 	.append(editBtn)
+						// 	.append(delBtn);
+					});
+				});
+			}
+
+			$(document).on("click", ".delete", function(e) {
+				e.preventDefault();
+
+				var id = $(this).data("delete");
+
+				// Send the DELETE request.
+				$.ajax("/api/writeStory/delete/" + id, {
+					type: "DELETE",
+				}).then(function() {
+					// Reload the page to get the updated list
+					location.reload();
+				});
+			});
+
+			$(document).on("click", ".edit", function(e) {
+				e.preventDefault();
+				var id = $(this).data("edit");
+				console.log(id);
+				var htmldata;
+				var title;
+				$.get(`/api/writeStory/show/` + id).then((data) => {
+					htmldata = data[0].story;
+
+					title = data[0].title;
+					console.log(title);
+
+					document.querySelector(".ql-editor").innerHTML = htmldata;
+					// document.querySelector('#title').innerHTML= title;
+					var titled = JSON.stringify(
+						$("#title").val($("#title").val() + title)
+					);
+
+					editing(id);
+				});
+			});
+
+			function editing(id) {
+				$(document).on("click", "#updateText", function(e) {
+					e.preventDefault();
+
+					var content2 = document.querySelector(".ql-editor").innerHTML;
+					var title2 = document.querySelector("#title").value;
+
+					console.log("check data type2: ", typeof title2);
+
+					$.post(`/api/writeStory/show/${id}`, {
+						story: content2,
+						title: title2,
+					}).then((display) => {
+						// debugger;
+						window.location.replace("/writeStory");
+					});
+				});
+			}
+
+			function handleLoginErr(err) {
+				console.log("Error......");
+			}
+		</script>
+	</body>
 </html>
