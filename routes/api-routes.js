@@ -31,7 +31,7 @@ module.exports = function(app) {
       age: req.body.age,
       policy: req.body.policy,
       secretToken: randomstring.generate(),
-      active: false,
+      active: true,
     })
       .then(result => {
         res.redirect('/login');
