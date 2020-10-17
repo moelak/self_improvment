@@ -32,8 +32,7 @@
   color: white;
 }
 
-/* Button Styling */
-#loggers {
+button Styling #loggers {
   margin-right: 50%;
 }
 
@@ -47,4 +46,70 @@
 .btn-secondary:visited {
   font-family: 'Amatic SC', cursive;
   background-color: aquamarine !important;
+}
+
+.pageTitle {
+  font-family: 'Pacifico', cursive;
+  padding-top: 20px;
+  margin-bottom: 60px;
+  font-size: 46px;
+}
+
+.loginLable {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+}
+
+.btnText {
+  font-family: 'Amatic SC', cursive;
+  background-color: white;
+  color: rgb(87 166 161);
+  font-size: 20px;
+}
+
+div#editor {
+  height: 300px;
+  font-weight: 500;
+}
+
+#changer {
+  font-family: 'Amatic SC', cursive;
+  color: grey !important;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.ql-container {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  height: 100%;
+  margin: 0px;
+  position: relative;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(113, 218, 211),
+    orange
+  );
+
+  height: 100vh;
+}
+
+#signUpNav,
+.nav-link {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#signUpNav:hover,
+#signUpNav-active,
+#signUpNav:visited {
+  font-family: 'Amatic SC', cursive;
+  color: grey !important;
+  font-weight: bolder;
+  font-size: 25px;
 }

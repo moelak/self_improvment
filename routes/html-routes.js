@@ -43,6 +43,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, '../public/signup.html'));
   });
 
+  app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+
 
   app.get('/story', isAuthenticated,(req, res) => {
     res.sendFile(path.join(__dirname, '../public/story.html'));

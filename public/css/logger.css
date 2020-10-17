@@ -37,13 +37,13 @@ form.login {
 /*Fourm Page Text Styling */
 #logins {
   font-family: 'Pacifico', cursive;
-  font-size: 60px;
-  color: rgb(113, 218, 211);
+  font-size: 46px;
+  color: black;
 }
 
 .emailz {
   font-family: 'Amatic SC', cursive;
-  color: grey !important;
+  color: black !important;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -77,24 +77,28 @@ form.login {
 
 /* Set a background image by replacing the URL below */
 body {
-  background-color: lightgray;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(113, 218, 211),
+    orange
+  );
 }
 
 /* Login & Signup Forms */
 .form-control {
-  font-size: 1.7rem;
+  font-size: 1rem;
 }
 
 /* -----Check box ----*/
 .form-check {
   position: relative;
   display: block;
-  padding-left: 4px;
+  padding-left: 20px;
 }
 
-label.form-check-label {
+/* label.form-check-label {
   padding-left: 25px;
-}
+} */
 
 input[type='checkbox'] {
   /* Double-sized Checkboxes */
@@ -105,3 +109,45 @@ input[type='checkbox'] {
   transform: scale(1.5);
 }
 /* ----Check box---- */
+
+#termsConditions {
+  font-family: 'Amatic SC', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 991px) {
+  #logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.2rem;
+    color: rgb(113, 218, 211);
+  }
+
+  #logins {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: black;
+  }
+  .emailz {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    color: rgb(113, 218, 211);
+  }
+
+  #logins {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+    color: black;
+  }
+
+  .emailz {
+    font-size: 20px;
+  }
+}

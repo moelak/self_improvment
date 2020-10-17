@@ -31,7 +31,7 @@ module.exports = function(app) {
       age: req.body.age,
       policy: req.body.policy,
       secretToken: randomstring.generate(),
-      active: true,
+      active: false,
     })
       .then(result => {
         res.redirect('/login');
@@ -46,7 +46,7 @@ module.exports = function(app) {
         Token: <strong>${result.secretToken}</strong>
         <br>
         On teh following page:
-        <a href="http://localhost:3000/verify">http://localhost:3000/verify</a>
+        <a href="https://lit-depths-25209.herokuapp.com/verify">https://lit-depths-25209.herokuapp.com/verify</a>
         `;
 
         //Send an email
@@ -87,7 +87,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/');
+    res.redirect('/index');
   });
 
   // get individual user
