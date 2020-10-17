@@ -9,6 +9,12 @@ const WriteStory = require('../models/writeStory');
 const mailer = require('../misc/mailer');
 const isAuthenticated = require('../config/middleware/isAuthenticated');
 
+const express = require ("express");
+const router = express.Router();
+const homeController = require("../controllers/home");
+const uploadController = require ("../controllers/upload");
+const upload = require ("../config/middleware/upload")
+
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -136,8 +142,32 @@ module.exports = function(app) {
     });
   });
 
+  
+
+// post image to database 
+app.post('/api/writeStory/upload',upload.single("file2") ,(req,res) => {
+  uploadController.uploadFiles,
+  db.User.update({
+    image: req.file
+  }, {
+    where: {uuid: req.user.uuid}
+  })
+});
+
+
+//Get image from the database 
+
+app.get('/api/admin/all_user/:user_id', isAuthenticated,(req, res) => {
+   
+  db.User.findAll({
+    where: {uuid: req.params.user_id}
+  }).then(function(results) {
+    res.json(results);
+  });
+});
  
-//Get all Story
+  
+//Get all Storys
   app.get('/api/writeStory', isAuthenticated,(req, res) => {
     db.WriteStory.findAll({
     }).then(function(results) {
@@ -185,4 +215,4 @@ module.exports = function(app) {
   });
 
 
-};
+}

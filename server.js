@@ -8,6 +8,7 @@ const passport = require('./config/passport');
 const PORT = process.env.PORT || 3000;
 const db = require('./models');
 
+
 // Creating express app and configuring middleware needed for authentication
 const app = express();
 app.use(express.urlencoded({ extended: true }));
@@ -19,6 +20,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 // Requiring our routes
 require('./routes/html-routes.js')(app);
