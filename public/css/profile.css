@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(113, 218, 211);
+  background-image: linear-gradient(to bottom right, rgb(113, 218, 211), orange);
 }
 
 /* Page Text Styling */
@@ -84,7 +84,7 @@ body {
 #jumboBtn1 {
   font-family: 'Amatic SC', cursive;
   background-color: white !important;
-  color: rgb(113, 218, 211) !important;
+  background-image: linear-gradient(to bottom right, rgb(113, 218, 211), orange);
   font-weight: bolder;
   margin-left: 80px;
 }

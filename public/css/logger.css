@@ -38,12 +38,12 @@ form.login {
 #logins {
   font-family: 'Pacifico', cursive;
   font-size: 60px;
-  color: rgb(113, 218, 211);
+  color: black;
 }
 
 .emailz {
   font-family: 'Amatic SC', cursive;
-  color: grey !important;
+  color: black !important;
   font-weight: bolder;
   font-size: 25px;
 }
@@ -77,24 +77,24 @@ form.login {
 
 /* Set a background image by replacing the URL below */
 body {
-  background-color: lightgray;
+  background-image: linear-gradient(to bottom right, rgb(113, 218, 211), orange);
 }
 
 /* Login & Signup Forms */
 .form-control {
-  font-size: 1.7rem;
+  font-size: 1.0rem;
 }
 
 /* -----Check box ----*/
 .form-check {
   position: relative;
   display: block;
-  padding-left: 4px;
+  padding-left: 20px;
 }
 
-label.form-check-label {
+/* label.form-check-label {
   padding-left: 25px;
-}
+} */
 
 input[type='checkbox'] {
   /* Double-sized Checkboxes */
@@ -105,3 +105,10 @@ input[type='checkbox'] {
   transform: scale(1.5);
 }
 /* ----Check box---- */
+
+#termsConditions {
+  font-family: 'Amatic SC', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 18px;
+}

@@ -1,10 +1,13 @@
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: fixed;
-  width: 100%;
-  height: 810px;
-  object-fit: cover;
-  z-index: -100;
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to bottom right, rgb(113, 218, 211), orange);
+  background-repeat: no-repeat;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -48,3 +51,68 @@
   font-family: 'Amatic SC', cursive;
   background-color: aquamarine !important;
 }
+
+
+/* verify.html */
+
+#verification {
+  font-family: 'Pacifico', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+#accessToken {
+  font-family: 'Amatic SC', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+#verifyAccess {
+  font-family: 'Amatic SC', cursive;
+  background-color: white !important;
+  font-weight: bolder;
+  font-size: 16px;
+  border-width: 0px;
+  color: rgb(87 166 161);
+}
+
+/* login.html */
+
+#loginTitle {
+  font-family: 'Pacifico', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+#inputInfo {
+  font-family: 'Amatic SC', cursive;
+  color: black !important;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+  #loginButton {
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    font-weight: bolder;
+    font-size: 16px;
+    border-width: 0px;
+    color: rgb(87 166 161);
+  }
+
+  #signUpHere {
+    font-family: 'Amatic SC', cursive;
+    color: black !important;
+    font-weight: bolder;
+    font-size: 16px;
+  }
+
+  #signUpNav {
+    font-family: 'Amatic SC', cursive;
+    color: grey !important;
+    font-weight: bolder;
+    font-size: 25px;
+  }

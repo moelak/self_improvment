@@ -9,21 +9,24 @@
       href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+			rel="stylesheet"
+		/>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
-      </div>
-    </nav>
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h2>verify Form</h2>
+          <h2 id="verification">Verify Form</h2>
           <form class="signup">
             <div class="form-group">
-              <label for="exampleInputEmail1">access token</label>
+              <label id="accessToken" for="exampleInputEmail1">Access Token</label>
               <input
                 type="text"
                 class="form-control"
@@ -52,7 +55,8 @@
         </div>
       </div>
     </div>
-
+<br>
+<br>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
      $('#verifyAccess').click(event => {
