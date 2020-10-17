@@ -1,7 +1,5 @@
-body {
-    background-color: rgb(113,218,211);
-}
 
+/*Start------------------------------------------------------------------------------------------------------------------------------- */
 /* Page Text Styling */
 #logo {
     font-family: 'Pacifico', cursive;
@@ -15,8 +13,25 @@ body {
     font-size: 35px;
     color: white;
 }
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
 
+
+
+
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
 /* Nav Bar Styling */
+.navbar {
+    min-height: 90px;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 100px;
+    line-height: 80px;
+}
+
+
 .nav-link {
     font-family: 'Amatic SC', cursive;
     color: rgb(113,218,211);
@@ -28,16 +43,18 @@ body {
 .nav-link-active,
 .nav-link:visited {
     font-family: 'Amatic SC', cursive;
-    color: grey !important;
+    color: black !important;
     font-weight: bolder;
     font-size: 25px;
 
 }
 
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
 
 
 
-/* Jumbotron Styling */
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+/* Profile Jumbotron Styling */
 .jumbo-height {
     min-height: 650px;
     background: linear-gradient(black, transparent 60%),
@@ -55,8 +72,7 @@ body {
     width: 270px;
 }
 
-
-/* Jumbotron Contents */
+/* Profile Jumbotron Contents */
 #myName {
     font-family: 'Pacifico', cursive;
     color: white;
@@ -66,7 +82,7 @@ body {
 .lead {
     font-family: 'Amatic SC', cursive;
     color: white;
-    font-size: 25px;
+    font-size: 45px;
     float: left;
 }
 
@@ -74,17 +90,22 @@ body {
     margin-left: 400px;
 
 }
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
 
-/* button1 */
+
+
+
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+/* Profile Jumbotron Buttons */
 #jumboBtn1 {
     font-family: 'Amatic SC', cursive;
     background-color: white !important;
     color: rgb(113,218,211) !important;
     font-weight: bolder;
-    margin-left: 80px;
+    font-size: 20px;
 
 }
-
 
 #jumboBtn1:hover,
 #jumboBtn-active1,
@@ -92,117 +113,77 @@ body {
     font-family: 'Amatic SC', cursive;
     color:aquamarine!important;
     font-weight: bolder;
-    font-size: 21px;
-
-
-
+    font-size: 20px;
 }
 
-/* button2 */
-#jumboBtn2 {
+#savetext {
     font-family: 'Amatic SC', cursive;
     background-color: white !important;
     color: rgb(113,218,211) !important;
     font-weight: bolder;
-    margin-left: 280px;
+    border: none;
+    font-size: 20px;
 
 }
 
-
-#jumboBtn2:hover,
-#jumboBtn-active2,
-#jumboBtn2:visited {
+#savetext:hover,
+#savetext-active1,
+#savetext:visited {
     font-family: 'Amatic SC', cursive;
-    color:aquamarine !important;
+    color:aquamarine!important;
     font-weight: bolder;
-    font-size: 21px;
-
-
-
+    border: none;
+    font-size: 20px;
 }
 
-/* button3 */
-#jumboBtn3 {
+#updateText {
     font-family: 'Amatic SC', cursive;
     background-color: white !important;
-    color: rgb(113,218,211)!important;
+    color: rgb(113,218,211) !important;
     font-weight: bolder;
-    margin-left: 300px;
+    border: none;
+    font-size: 20px;
 
 }
 
-
-#jumboBtn3:hover,
-#jumboBtn-active3,
-#jumboBtn3:visited {
+#updateText:hover,
+#updateText-active1,
+#updateText:visited {
     font-family: 'Amatic SC', cursive;
-    color: aquamarine!important;
+    color:aquamarine!important;
     font-weight: bolder;
-    font-size: 21px;
+    border: none;
+    font-size: 20px;
+}
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
 
 
 
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+/* Story Editor */
+#titleTag{
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    font-weight: bolder;
+    font-size: 35px; 
 }
 
-/* Forms */
 #texting {
     
     font-family: 'Amatic SC', cursive;
-    color: white;
+    color: black;
     font-weight: bolder;
     font-size: 35px;
 }
 
-.card-body {
-    background-color: lightgray;
-
-    
-}
-
-
-
-
-/* Story Cards */
-
-.display-4 {
-    font-family: 'Pacifico', cursive;
-    color: black;
-}
-
-
-.btn-primary {
-    /* font-family: 'Amatic SC', cursive;
-    background-color: white !important;
-    color: pink;
-    font-weight: bolder; */
-    font-family: 'Amatic SC', cursive;
-    background-color: white !important;
-    color: rgb(113,218,211) !important;
-    font-weight: bolder;
-    margin-left: 80px;
-
-}
-
-
-.btn-primary :hover,
-.btn-primary-active,
-.btn-primary :visited {
-    /* font-family: 'Amatic SC', cursive;
-    color: rgb(255, 164, 178) !important;
-    font-weight: bolder;
-    font-size: 21px; */
-    font-family: 'Amatic SC', cursive;
-    color:aquamarine!important;
-    font-weight: bolder;
-    font-size: 21px;
-
-}
-
 div#editor {
+    background-color: White;
     height: 300px;
 }
 
 .ql-container {
+    
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -210,3 +191,117 @@ div#editor {
     margin: 0px;
     position: relative;
 }
+
+.edit{
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    margin-left: 80px;
+    border: none;
+    font-size: 20px; 
+}
+
+.edit:hover,
+.edit-active1,
+.edit:visited {
+    font-family: 'Amatic SC', cursive;
+    color:aquamarine!important;
+    font-weight: bolder;
+    border: none;
+    font-size: 20px;
+}
+
+.delete{
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(185, 121, 0) !important;
+    font-weight: bolder;
+    border: none;
+    font-size: 20px; 
+}
+
+.delete:hover,
+.delete-active1,
+.delete:visited {
+    font-family: 'Amatic SC', cursive;
+    color:orange!important;
+    font-weight: bolder;
+    border: none;
+    font-size: 20px;
+}
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+/* Story Cards */
+.display-4 {
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+.jumbotron{
+    background-color: white;
+    margin:20px;
+}
+
+
+
+.btn-primary {
+
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    margin-left: 80px;
+    font-size: 31px;
+
+}
+
+.btn-primary :hover,
+.btn-primary-active,
+.btn-primary :visited {
+    font-family: 'Amatic SC', cursive;
+    color:aquamarine!important;
+    font-weight: bolder;
+    font-size: 31px;
+
+}
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+/* background of the page */
+body {
+    background-image: linear-gradient(to bottom right, rgb(113,218,211), orange);
+}
+/*Stop ------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+#storyButton {
+
+    font-family: 'Amatic SC', cursive;
+    background-color: white !important;
+    color: rgb(113,218,211) !important;
+    font-weight: bolder;
+    border: none;
+    font-size: 31px;
+
+}
+
+#storyButton:hover,
+#storyButton-active,
+#storyButton:visited {
+    font-family: 'Amatic SC', cursive;
+    color:orange!important;
+    font-weight: bolder;
+    font-size: 31px;
+}
+/*Start ------------------------------------------------------------------------------------------------------------------------------- */
+

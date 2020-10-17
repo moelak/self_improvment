@@ -32,7 +32,7 @@
   color: white;
 }
 
-/* Button Styling */
+Button Styling
 #loggers {
   margin-right: 50%;
 }
@@ -61,3 +61,11 @@ div#editor {
   margin: 0px;
   position: relative;
 }
+
+
+body {
+  background-image: linear-gradient(to bottom right, rgb(113,218,211), orange);
+}
+
+
+

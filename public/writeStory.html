@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Passport Authentication</title>
+		<title>Mindful-Profile</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
@@ -130,55 +130,67 @@
 
 					<a id="jumboBtn1" class="btn-primary btn-lg" href="#" role="button"
 						>Profile Pic</a
-          >
-        </div>
-        </div>
+					>
+				</div>
+			</div>
 
-					<!-- new -->
-					<!-- new -->
+			<!-- new -->
+			<!-- new -->
 
-					<div class="container">
-				<div class="jumbotron">
-						<h2 id="newBook" class="display-4">New Story</h2>
-						<form>
-              <br>
-					<div class="form-group">
-            <label for="exampleInput userName1" aria-required="true">Title</label>
-            <input
-						type="text"
-						class="form-control"
-						id="title"
-						placeholder="Create a user name"
-						aria-describedby="inputGroupPrepend"
-						required
-					/>
+			<div id="writeBox" class="jumbotron bg-white">
+				<h2 id="newBook" class="display-4">New Story</h2>
+				<form>
 					<br />
-  
-          
+					<div class="form-group">
+						<label id="titleTag" for="exampleInput userName1" aria-required="true"
+							>Title</label
+						>
+						<input
+							type="text"
+							class="form-control"
+							id="title"
+							placeholder="Create a user name"
+							aria-describedby="inputGroupPrepend"
+							required
+						/>
+						<br />
+					</div>
 
-							</div>
-			
-							<div class="form-group">
-					  <label id="texting" for="exampleFormControlTextarea1">Write your story</label>
+					<div class="form-group">
+						<label id="texting" for="exampleFormControlTextarea1"
+							>Write your story</label
+						>
 					</div>
 					<div class="col-md-13 col-md-offset-0">
-					  <div id="toolbar"></div>
-					  <div id="editor"></div>
+						<div id="toolbar"></div>
+						<div id="editor"></div>
 					</div>
-			
-						</form>
-			
-						<br />
-					<div class="col text-center">
-					<button class="btn-default btn-lg" href="#" role="button" id="savetext">Submit </button>
-					<button class="btn-default btn-lg" href="#" role="button" id="updateText">Save </button>
-        </div>
+				</form>
 
-					<!-- new -->
-
-
+				<br />
+				<div class="col text-center">
+					<button
+						class="btn-default btn-lg"
+						href="#"
+						role="button"
+						id="savetext"
+					>
+						Submit
+					</button>
+					<button
+						class="btn-default btn-lg"
+						href="#"
+						role="button"
+						id="updateText"
+					>
+						Save
+					</button>
 				</div>
-				<!-- <div class="col-md-6 col-md-offset-3">
+
+				<!-- new -->
+			</div>
+
+			<!-- <div class="col-md-6 col-md-offset-3">
 					<h2>Wriete Story</h2>
 
 					<label for="exampleInput userName1" aria-required="true">Title</label>
@@ -193,7 +205,7 @@
 					<br />
 					<br /> -->
 
-					<!-- <div id="toolbar"></div>
+			<!-- <div id="toolbar"></div>
 					<div id="editor"></div>
 				</div>
 				<button id="savetext">Submite</button>
@@ -276,9 +288,9 @@
 						var delBtn = $(
 							`<button class="delete" data-delete='${value.id}'>Delete</button>`
 						);
-            
-            var container = $('<div class="container">');
-						var jumbo = $('<div class="jumbotron">');
+
+						var container = $('<div class="container">');
+						var jumbo = $('<div class="jumbotron bg-white">');
 						var title = $('<h3 id="story2" class="display-4">').text(
 							value.title
 						);
@@ -286,25 +298,14 @@
 						var br = $("<br>");
 						var hr = $('<hr class="my-4" />');
 						var col = $('<div class="col text-center">');
-      console.log(text,'++++++++++++')
+						console.log(text, "++++++++++++");
 
 						col.append(editBtn, delBtn);
 						jumbo.append(title, hr, br, value.story, col);
 						container.append(jumbo);
 						$("#displayStory").append(container);
 
-
-
-
-
-						// $(
-						// 	'<div class="storyList" style="border: 3px solid; padding: 20px; width: 50%; margin-top: 20px;">'
-						// )
-						// 	.appendTo("#displayStory")
-						// 	.append(title)
-						// 	.append(value.story)
-						// 	.append(editBtn)
-						// 	.append(delBtn);
+					
 					});
 				});
 			}

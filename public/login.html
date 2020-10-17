@@ -1,54 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Passport Authentication</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
+	<head>
+		<title>Mindful-Log In</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<link href="css/logger.css" rel="stylesheet" />
+	</head>
 
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
-      </div>
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Login Form</h2>
-          <form class="login">
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email-input"
-                placeholder="Email"
-              />
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password-input"
-                placeholder="Password"
-              />
-            </div>
-            <button type="submit" class="btn btn-default">Login</button>
-          </form>
-          <br />
-          <p>Or sign up <a href="/signup">here</a></p>
-        </div>
-      </div>
-    </div>
+	<body>
+		<!-- new -->
+		<!-- WEBSITES NAVBAR  -->
+		<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
+			<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<!-- <li>
+						<a class="nav-link" href="index.html">Log Out</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/story">Stories</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/writeStory"
+							>Profile<span class="sr-only">(current)</span></a
+						>
+					</li> -->
+				</ul>
+			</div>
+		</nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
-  </body>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 id="logInform">Login Form</h2>
+					<form class="login">
+						<div class="form-group">
+							<label class="emailz" for="exampleInputEmail1"
+								>Email address</label
+							>
+							<input
+								type="email"
+								class="form-control"
+								id="email-input"
+								placeholder="Email"
+							/>
+						</div>
+						<div class="form-group">
+							<label class="emailz" for="exampleInputPassword1">Password</label>
+							<input
+								type="password"
+								class="form-control"
+								id="password-input"
+								placeholder="Password"
+							/>
+						</div>
+						<button id="submitMe" type="submit" class="btn btn-default">
+							Login
+						</button>
+					</form>
+					<br />
+					<p id="changer">Or sign up <a href="./signup.html">here</a></p>
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</body>
 </html>
