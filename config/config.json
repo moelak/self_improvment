@@ -9,7 +9,7 @@
   "test": {
     "username": "root",
     "password": "Minkyoung!1017",
-    "database": "database_test",
+    "database": "passport",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

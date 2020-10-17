@@ -146,7 +146,7 @@ module.exports = function(app) {
 
 // post image to database 
 app.post('/api/writeStory/upload',upload.single("file2") ,(req,res) => {
-  uploadController.uploadFiles,
+  uploadController.uploadFiles
   db.User.update({
     image: req.file
   }, {
@@ -155,19 +155,28 @@ app.post('/api/writeStory/upload',upload.single("file2") ,(req,res) => {
 });
 
 
-//Get image from the database 
+// Get image from the database 
+// app.get('/api/writeStory/upload, isAuthenticated, (req,res)=> {
+//   db.User.findAll({
+//     where: {UserUuid:req.body.user_id},
+//   }).then( result => {
+//    res.json(result)
+//   })
 
-app.get('/api/admin/all_user/:user_id', isAuthenticated,(req, res) => {
+// });
+
+app.get('/api/admin/all_user/user_id', (req, res) => {
    
   db.User.findAll({
-    where: {uuid: req.params.user_id}
+    where: {UserUuid}
   }).then(function(results) {
+    // console.log("/.............",User.active,".............//");
     res.json(results);
   });
 });
  
   
-//Get all Storys
+//Get all Story
   app.get('/api/writeStory', isAuthenticated,(req, res) => {
     db.WriteStory.findAll({
     }).then(function(results) {

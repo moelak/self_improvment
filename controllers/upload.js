@@ -17,11 +17,11 @@ const uploadFiles = async (req, res) => {
       type: req.file.mimetype,
       name: req.file.originalname,
       data: fs.readFileSync(
-        __dirname+ "../config/middlewareconfig/middleware/static/images" + req.file.filename
+        __dirname+ "../config/middleware/static/images" + req.file.filename
       ),
     }).then((image) => {
       fs.writeFileSync(
-        __dirname + "../config/middlewareconfig/middleware/static/images/tmp" + image.name,
+        __dirname + "../config/middleware/static/images/tmp" + image.name,
         image.data
       );
 

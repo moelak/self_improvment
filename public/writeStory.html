@@ -72,13 +72,13 @@
         id="input-files"
         class="form-control-file border"
       />
+      <button type="submit" class="btn btn-primary">Submit</button>
     
   </form>
-  <button type="submit" class="btn btn-primary">Submit</button>
   <!-- <div class >
     <img src= imageURL alt="profile picture" width="500" height="600">
   </div> -->
-  <img id="img" width=100%>
+
     <script>
       var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike'],
@@ -242,50 +242,19 @@ var content2 = document.querySelector('.ql-editor').innerHTML;
                 $($.parseHTML("<img>"))
                   .attr("src", event.target.result)
                   .appendTo(placeToInsertImagePreview);
-              };  
+              };
               reader.readAsDataURL(input.files[i]);
             }
           }
         };
         $("#input-files").on("change", function() {
           imagesPreview(this, "div.preview-images");
-//          $.ajax("/api/admin/all_user/9c6005e0-0f49-11eb-a858-b32b624976da", {
-//       type: "GET"
-//     }).then((data)=>{
-//       console.log("data :   ", data)
-//       var reader = new FileReader();
-//     reader.readAsDataURL(data.image); 
-//     reader.onloadend = function() {
-//     base64data = reader.data; 
-//     console.log("+++++++++++++++++++++++=" , base64data)    
-
-    } 
-    );
-
-    jQuery.ajax({
-  url:'/api/admin/all_user/9c6005e0-0f49-11eb-a858-b32b624976da',
-        cache:false,
-        xhr:function(){// Seems like the only way to get access to the xhr object
-            var xhr = new XMLHttpRequest();
-            xhr.responseType= 'blob'
-            // return xhr;
-            console.log(xhr)
-        },
-        success: function(data){
-            console.log(data, "++++++++++++++++++++++")
-            var img = document.getElementById('img');
-            console.log(img , "---------------------------")
-            var url = window.URL || window.webkitURL;
-            console.log(url, " @@@@@@@@@@@@@@@@@@@@@@@@@@@")
-            img.src = url.createObjectURL(data);
-        },
-        error:function(){
-          console.log("NOOOOOO")
-        }
-    });
-  });
-        
-      
+         $.ajax("/api/admin/all_user/9c6005e0-0f49-11eb-a858-b32b624976da", {
+      type: "GET"
+    }).then((data)=>{
+      console.log("data :   ", data)
+    
+    }
         // let blob = await fetch(url).then(r => r.blob());
 
 
