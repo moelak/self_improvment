@@ -1,290 +1,299 @@
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(113, 218, 211),
-    orange
-  );
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(113, 218, 211),
+		orange
+	);
 }
 
 /* Page Text Styling */
 #logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 60px;
-  color: rgb(113, 218, 211);
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	color: rgb(113, 218, 211);
 }
 
 .paddingTop {
-  padding-top: 54px;
+	padding-top: 54px;
 }
 
 #cap {
-  /* font-family: 'Varela Round', sans-serif; */
-  font-family: 'Amatic SC', cursive;
-  font-size: 35px;
-  color: white;
+	/* font-family: 'Varela Round', sans-serif; */
+	font-family: 'Amatic SC', cursive;
+	font-size: 35px;
+	color: white;
 }
 
 /* Nav Bar Styling */
 .nav-link {
-  font-family: 'Amatic SC', cursive;
-  color: rgb(113, 218, 211);
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: rgb(113, 218, 211);
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 .nav-link:hover,
 .nav-link-active,
 .nav-link:visited {
-  font-family: 'Amatic SC', cursive;
-  color: grey !important;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: grey !important;
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 /* Jumbotron Styling */
 .jumbo-height {
-  min-height: 650px;
-  background: linear-gradient(black, transparent 60%), url('./monstra.jpeg');
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  min-height: 640px;
-  color: #fff;
+	min-height: 650px;
+	background: linear-gradient(black, transparent 60%), url('./monstra.jpeg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	min-height: 640px;
+	color: #fff;
+}
+
+.jumbotron {
+	padding: 4rem 2rem;
+	border-radius: 20px;
+}
+
+.jumbotron.jumbotron-fluid.jumbo-height {
+	border-radius: 20px;
 }
 
 .img-size {
-  height: 300px;
-  width: 270px;
+	height: 300px;
+	width: 270px;
 }
 
 /* Jumbotron Contents */
 #myName {
-  font-family: 'Pacifico', cursive;
-  color: white;
-  margin-left: 30%;
+	font-family: 'Pacifico', cursive;
+	color: white;
+	margin-left: 30%;
 }
 
 .lead {
-  font-family: 'Amatic SC', cursive;
-  color: white;
-  font-size: 25px;
-  float: left;
+	font-family: 'Amatic SC', cursive;
+	color: white;
+	font-size: 25px;
+	float: left;
 }
 
 .rounded-circle {
-  margin-left: 50%;
-  transform: translate(-50%, 10px);
+	margin-left: 50%;
+	transform: translate(-50%, 10px);
 }
 
 .uploadImg {
-  /* margin-top: 20px; */
-  margin-left: 50%;
-  transform: translate(-125px, 25px);
-  /* margin-bottom: -20px; */
+	/* margin-top: 20px; */
+	margin-left: 50%;
+	transform: translate(-125px, 25px);
+	/* margin-bottom: -20px; */
 }
 
 /* button1 */
 #jumboBtn1 {
-  font-family: 'Amatic SC', cursive;
-  background-color: white !important;
-  color: black !important;
-  font-weight: bolder;
-  margin-left: 80px;
+	font-family: 'Amatic SC', cursive;
+	background-color: white !important;
+	color: black !important;
+	font-weight: bolder;
+	margin-left: 80px;
 }
 
 #jumboBtn1:hover,
 #jumboBtn-active1,
 #jumboBtn1:visited {
-  font-family: 'Amatic SC', cursive;
-  color: black;
-  font-weight: bolder;
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	color: black;
+	font-weight: bolder;
+	font-size: 20px;
 }
 /* button2 */
 #jumboBtn2 {
-  font-family: 'Amatic SC', cursive;
-  background-color: white !important;
-  color: rgb(113, 218, 211) !important;
-  font-weight: bolder;
-  margin-left: 280px;
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	background-color: white !important;
+	color: rgb(113, 218, 211) !important;
+	font-weight: bolder;
+	margin-left: 280px;
+	font-size: 20px;
 }
 
 #jumboBtn2:hover,
 #jumboBtn-active2,
 #jumboBtn2:visited {
-  font-family: 'Amatic SC', cursive;
-  color: aquamarine !important;
-  font-weight: bolder;
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	color: aquamarine !important;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
 /* button3 */
 #jumboBtn3 {
-  font-family: 'Amatic SC', cursive;
-  background-color: white !important;
-  color: rgb(113, 218, 211) !important;
-  font-weight: bolder;
-  margin-left: 300px;
+	font-family: 'Amatic SC', cursive;
+	background-color: white !important;
+	color: rgb(113, 218, 211) !important;
+	font-weight: bolder;
+	margin-left: 300px;
 }
 
 #jumboBtn3:hover,
 #jumboBtn-active3,
 #jumboBtn3:visited {
-  font-family: 'Amatic SC', cursive;
-  color: aquamarine !important;
-  font-weight: bolder;
-  font-size: 21px;
+	font-family: 'Amatic SC', cursive;
+	color: aquamarine !important;
+	font-weight: bolder;
+	font-size: 21px;
 }
 
 .jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  border-radius: 0;
-  min-height: 365px;
+	padding-right: 0;
+	padding-left: 0;
+	border-radius: 0;
+	min-height: 365px;
 }
 
 /* Forms */
 .editorTitle {
-  font-family: 'Amatic SC', cursive;
-  color: black;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: black;
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 .card-body {
-  background-color: lightgray;
+	background-color: lightgray;
 }
 
 /* Story Cards */
 
 .display-4 {
-  font-family: 'Pacifico', cursive;
-  color: black;
+	font-family: 'Pacifico', cursive;
+	color: black;
 }
 
 .btn-primary :hover,
 .btn-primary-active,
 .btn-primary :visited {
-  font-family: 'Amatic SC', cursive;
-  color: aquamarine !important;
-  font-weight: bolder;
-  font-size: 21px;
+	font-family: 'Amatic SC', cursive;
+	color: aquamarine !important;
+	font-weight: bolder;
+	font-size: 21px;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  margin: 6px;
+	color: #fff;
+	background-color: #007bff;
+	border-color: #007bff;
+	margin: 6px;
 }
 
 div#editor {
-  height: 400px;
-  background: white;
+	height: 400px;
+	background: white;
 }
 
 .ql-container {
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px !important;
-  height: 100%;
-  margin: 0px;
-  position: relative;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px !important;
+	height: 100%;
+	margin: 0px;
+	position: relative;
 }
 
 .titleFont {
-  font-size: 2.5rem !important;
+	font-size: 2.5rem !important;
 }
 h3.display-4.storyTitle {
-  font-size: 2.2rem;
+	font-size: 2.2rem;
 }
 
 @media only screen and (max-width: 991px) {
-  #logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 3.2rem;
-    color: rgb(113, 218, 211);
-  }
+	#logo {
+		font-family: 'Pacifico', cursive;
+		font-size: 3.2rem;
+		color: rgb(113, 218, 211);
+	}
 
-  #myName {
-    font-family: 'Pacifico', cursive;
-    color: white;
-    margin-left: 30%;
-    font-size: 2.5rem;
-  }
-  .uploadImg {
-    /* margin-top: 20px; */
-    margin-left: 50%;
-    transform: translate(-125px, 25px);
-    padding-bottom: 20px;
-    /* margin-bottom: -20px; */
-  }
+	#myName {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		margin-left: 30%;
+		font-size: 2.5rem;
+	}
+	.uploadImg {
+		/* margin-top: 20px; */
+		margin-left: 50%;
+		transform: translate(-125px, 25px);
+		padding-bottom: 20px;
+		/* margin-bottom: -20px; */
+	}
 
-  .jumbotron-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    border-radius: 0;
-    min-height: 365px;
-  }
+	.jumbotron-fluid {
+		padding-right: 0;
+		padding-left: 0;
+		border-radius: 0;
+		min-height: 365px;
+	}
 
-  .titleFont {
-    font-size: 1.8rem !important;
-  }
+	.titleFont {
+		font-size: 1.8rem !important;
+	}
 
-  h3.display-4.storyTitle {
-    font-size: 1.5rem;
-  }
-  .img-fluid {
-    max-width: 60%;
-    height: auto;
-  }
+	h3.display-4.storyTitle {
+		font-size: 1.5rem;
+	}
+	.img-fluid {
+		max-width: 60%;
+		height: auto;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-  #logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 45px;
-    color: rgb(113, 218, 211);
-  }
+	#logo {
+		font-family: 'Pacifico', cursive;
+		font-size: 45px;
+		color: rgb(113, 218, 211);
+	}
 
-  #myName {
-    font-family: 'Pacifico', cursive;
-    color: white;
-    margin-left: 30%;
-    font-size: 2.2rem;
-  }
-  .uploadImg {
-    /* margin-top: 20px; */
-    margin-left: 50%;
-    transform: translate(-125px, 25px);
-    padding-bottom: 20px;
-    /* margin-bottom: -20px; */
-  }
+	#myName {
+		font-family: 'Pacifico', cursive;
+		color: white;
+		margin-left: 30%;
+		font-size: 2.2rem;
+	}
+	.uploadImg {
+		/* margin-top: 20px; */
+		margin-left: 50%;
+		transform: translate(-125px, 25px);
+		padding-bottom: 20px;
+		/* margin-bottom: -20px; */
+	}
 
-  .jumbotron-fluid {
-    padding-right: 0;
-    padding-left: 0;
-    border-radius: 0;
-    min-height: 365px;
-  }
+	.jumbotron-fluid {
+		padding-right: 0;
+		padding-left: 0;
+		border-radius: 0;
+		min-height: 365px;
+	}
 
-  .titleFont {
-    font-size: 1.7rem !important;
-  }
+	.titleFont {
+		font-size: 1.7rem !important;
+	}
 
-  h3.display-4.storyTitle {
-    font-size: 1.5rem;
-  }
+	h3.display-4.storyTitle {
+		font-size: 1.5rem;
+	}
 
-  .img-fluid {
-    max-width: 50% !important;
-    height: auto;
-  }
+	.img-fluid {
+		max-width: 50% !important;
+		height: auto;
+	}
 
-  div#editor {
-    height: 320px;
-    background: white;
-  }
+	div#editor {
+		height: 320px;
+		background: white;
+	}
 }
