@@ -128,16 +128,24 @@
 						`<h3 class="title" data-edit='${value.id}'>${value.title}</h3>`
 					);
 					var expandBtn = $(
-						`<button id="storyButton" data-toggle="modal" data-edit='${value.id}' data-target="#exampleModalLong" data-expand='${value.id}'>Expand</button>`
+						`<button class="storyButton"  data-toggle="modal" data-edit='${value.id}' data-target="#exampleModalLong" data-expand='${value.id}'>Read More</button>`
 					);
 
-					var container = $('<div class="container">');
-					var jumbo = $('<div class="jumbotron bg-white">');
+					var container = $('<div class="container story-section">');
+					var jumbo = $(
+						'<div class="jumbotron bg-white" style="background-color: #e9ecef !important">'
+					);
 					var title = $('<h3 id="story2" class="display-4">').text(value.title);
 
 					var str = value.story;
-					var res = str.split('.', 2);
-					var test = res.join(' ') + '<span>...</span>';
+
+					// 				function truncate(str, n) {
+					// 	return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+					// }
+					// 				console.log('str-----> ', data);
+					// var res = str.split('.', 2);
+					// var test = res.join(' ') + '<span>...</span>';
+					var test = str?.length > 300 ? str.substr(0, 300 - 1) + '...' : str;
 					// document.getElementById("demo").innerHTML = test;
 
 					// var text = $('< class="lead">').text(test);
@@ -156,7 +164,7 @@
 					// $(".modal-body").append(value.story);
 				});
 
-				$(document).on('click', '#storyButton', function(e) {
+				$(document).on('click', '.storyButton', function(e) {
 					var id = $(this).data('edit');
 					console.log(id);
 
