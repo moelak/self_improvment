@@ -1,99 +1,99 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+	margin-top: 50px;
 }
 
 /*Page Text Styling */
 #logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 60px;
-  color: rgb(113, 218, 211);
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	color: rgb(113, 218, 211);
 }
 
 #cap {
-  /* font-family: 'Varela Round', sans-serif; */
-  font-family: 'Amatic SC', cursive;
-  font-size: 35px;
-  color: white;
+	/* font-family: 'Varela Round', sans-serif; */
+	font-family: 'Amatic SC', cursive;
+	font-size: 35px;
+	color: white;
 }
 
 /* Nav Bar Styling */
 .nav-link {
-  font-family: 'Amatic SC', cursive;
-  color: rgb(113, 218, 211);
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: rgb(113, 218, 211);
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 .nav-link:hover,
 .nav-link-active,
 .nav-link:visited {
-  font-family: 'Amatic SC', cursive;
-  color: grey !important;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: grey !important;
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 /*Fourm Page Text Styling */
 #logins {
-  font-family: 'Pacifico', cursive;
-  font-size: 46px;
-  color: black;
+	font-family: 'Pacifico', cursive;
+	font-size: 46px;
+	color: black;
 }
 
 .emailz {
-  font-family: 'Amatic SC', cursive;
-  color: black !important;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: black !important;
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 #changer {
-  font-family: 'Amatic SC', cursive;
-  color: grey !important;
-  font-weight: bolder;
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	color: grey !important;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
 /* Form Page Button Styling */
 #submitMe {
-  font-family: 'Amatic SC', cursive;
-  background-color: white !important;
-  color: rgb(87 166 161) !important;
-  font-weight: bolder;
-  font-size: 20px;
-  margin-top: 30px;
-  transition: color 2s;
+	font-family: 'Amatic SC', cursive;
+	background-color: white !important;
+	color: rgb(87 166 161) !important;
+	font-weight: bolder;
+	font-size: 20px;
+	margin-top: 30px;
+	transition: color 2s;
 }
 
 #submitMe:hover,
 #submitMe-active,
 #submitMe:visited {
-  font-family: 'Amatic SC', cursive;
-  color: rgb(113, 218, 211) !important;
-  font-weight: bolder;
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	color: rgb(113, 218, 211) !important;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
 /* Set a background image by replacing the URL below */
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(113, 218, 211),
-    orange
-  );
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(113, 218, 211),
+		orange
+	);
 }
 
 /* Login & Signup Forms */
 .form-control {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 /* -----Check box ----*/
 .form-check {
-  position: relative;
-  display: block;
-  padding-left: 20px;
+	position: relative;
+	display: block;
+	padding-left: 20px;
 }
 
 /* label.form-check-label {
@@ -101,53 +101,83 @@ body {
 } */
 
 input[type='checkbox'] {
-  /* Double-sized Checkboxes */
-  -ms-transform: scale(1.5); /* IE */
-  -moz-transform: scale(1.5); /* FF */
-  -webkit-transform: scale(1.5); /* Safari and Chrome */
-  -o-transform: scale(1.5); /* Opera */
-  transform: scale(1.5);
+	/* Double-sized Checkboxes */
+	-ms-transform: scale(1.5); /* IE */
+	-moz-transform: scale(1.5); /* FF */
+	-webkit-transform: scale(1.5); /* Safari and Chrome */
+	-o-transform: scale(1.5); /* Opera */
+	transform: scale(1.5);
 }
 /* ----Check box---- */
 
 #termsConditions {
-  font-family: 'Amatic SC', cursive;
-  color: black !important;
-  font-weight: bolder;
-  font-size: 18px;
+	font-family: 'Amatic SC', cursive;
+	color: black !important;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.alert {
+	padding: 20px;
+	background-color: #4ca9f6;
+	color: white;
+	margin-top: 30px;
+}
+
+ol {
+	font-size: 12px;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: black;
+}
+.alert a {
+	color: white;
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 991px) {
-  #logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 3.2rem;
-    color: rgb(113, 218, 211);
-  }
+	#logo {
+		font-family: 'Pacifico', cursive;
+		font-size: 3.2rem;
+		color: rgb(113, 218, 211);
+	}
 
-  #logins {
-    font-family: 'Pacifico', cursive;
-    font-size: 40px;
-    color: black;
-  }
-  .emailz {
-    font-size: 23px;
-  }
+	#logins {
+		font-family: 'Pacifico', cursive;
+		font-size: 40px;
+		color: black;
+	}
+	.emailz {
+		font-size: 23px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-  #logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 45px;
-    color: rgb(113, 218, 211);
-  }
+	#logo {
+		font-family: 'Pacifico', cursive;
+		font-size: 45px;
+		color: rgb(113, 218, 211);
+	}
 
-  #logins {
-    font-family: 'Pacifico', cursive;
-    font-size: 35px;
-    color: black;
-  }
+	#logins {
+		font-family: 'Pacifico', cursive;
+		font-size: 35px;
+		color: black;
+	}
 
-  .emailz {
-    font-size: 20px;
-  }
+	.emailz {
+		font-size: 20px;
+	}
 }

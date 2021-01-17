@@ -1,115 +1,140 @@
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-  position: fixed;
-  width: 100%;
-  height: 810px;
-  object-fit: cover;
-  z-index: -100;
+	position: fixed;
+	width: 100%;
+	height: 810px;
+	object-fit: cover;
+	z-index: -100;
 }
 
 /* Add some content at the bottom of the video/page */
 .content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  color: #f1f1f1;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  overflow-y: auto;
+	position: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.2);
+	color: #f1f1f1;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	overflow-y: auto;
 }
 
 /*Page Text Styling */
 #logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 60px;
-  color: rgb(113, 218, 211);
+	font-family: 'Pacifico', cursive;
+	font-size: 60px;
+	color: rgb(113, 218, 211);
 }
 
 #cap {
-  font-family: 'Amatic SC', cursive;
-  font-size: 35px;
-  color: white;
+	font-family: 'Amatic SC', cursive;
+	font-size: 35px;
+	color: white;
 }
 
 button Styling #loggers {
-  margin-right: 50%;
+	margin-right: 50%;
 }
 
 .btn-secondary {
-  font-family: 'Amatic SC', cursive;
-  background-color: rgb(113, 218, 211) !important;
+	font-family: 'Amatic SC', cursive;
+	background-color: rgb(113, 218, 211) !important;
 }
 
 .btn-secondary:hover,
 .btn-secondary active,
 .btn-secondary:visited {
-  font-family: 'Amatic SC', cursive;
-  background-color: aquamarine !important;
+	font-family: 'Amatic SC', cursive;
+	background-color: aquamarine !important;
 }
 
 .pageTitle {
-  font-family: 'Pacifico', cursive;
-  padding-top: 20px;
-  margin-bottom: 60px;
-  font-size: 46px;
+	font-family: 'Pacifico', cursive;
+	padding-top: 20px;
+	margin-bottom: 60px;
+	font-size: 46px;
 }
 
 .loginLable {
-  font-family: 'Amatic SC', cursive;
-  font-size: 26px;
+	font-family: 'Amatic SC', cursive;
+	font-size: 26px;
 }
 
 .btnText {
-  font-family: 'Amatic SC', cursive;
-  background-color: white;
-  color: rgb(87 166 161);
-  font-size: 20px;
+	font-family: 'Amatic SC', cursive;
+	background-color: white;
+	color: rgb(87 166 161);
+	font-size: 20px;
 }
 
 div#editor {
-  height: 300px;
-  font-weight: 500;
+	height: 300px;
+	font-weight: 500;
 }
 
 #changer {
-  font-family: 'Amatic SC', cursive;
-  color: grey !important;
-  font-weight: bolder;
-  font-size: 24px;
+	font-family: 'Amatic SC', cursive;
+	color: grey !important;
+	font-weight: bolder;
+	font-size: 24px;
 }
 
 .ql-container {
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  height: 100%;
-  margin: 0px;
-  position: relative;
+	box-sizing: border-box;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	height: 100%;
+	margin: 0px;
+	position: relative;
 }
 
 body {
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(113, 218, 211),
-    orange
-  );
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(113, 218, 211),
+		orange
+	);
 
-  height: 100vh;
+	height: 100vh;
 }
 
 #signUpNav,
 .nav-link {
-  font-family: 'Amatic SC', cursive;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bolder;
+	font-size: 25px;
 }
 
 #signUpNav:hover,
 #signUpNav-active,
 #signUpNav:visited {
-  font-family: 'Amatic SC', cursive;
-  color: grey !important;
-  font-weight: bolder;
-  font-size: 25px;
+	font-family: 'Amatic SC', cursive;
+	color: grey !important;
+	font-weight: bolder;
+	font-size: 25px;
+}
+
+.alert {
+	padding: 20px;
+	background-color: #4ca9f6;
+	color: white;
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: black;
+}
+.alert a {
+	color: white;
+	text-decoration: underline;
 }

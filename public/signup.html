@@ -27,162 +27,221 @@
 		href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
 	  /> -->
 
-
-
-
-		
 		<link href="css/logger.css" rel="stylesheet" />
-</head>
+	</head>
 
-<body>
-	<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
-		<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
-		<button
-			class="navbar-toggler"
-			type="button"
-			data-toggle="collapse"
-			data-target="#navbarText"
-			aria-controls="navbarText"
-			aria-expanded="false"
-			aria-label="Toggle navigation"
-		>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarText">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="login.html">Log In</a>
-			</ul>
-		</div>
-	</nav>
-
-    <br>
-    <br>
-  
-    </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2 id="logins">Sign Up Form</h2>
-          <form class="signup needs-validation" novalidate>
-       
-            <div class="form-group">
-              <label  class="emailz"for="exampleInput userName1" aria-required="true">Anonymous Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="userName"
-				placeholder="Create a user name"
-				aria-describedby="inputGroupPrepend" required
-              />
-
-              <div class="invalid-feedback">
-                Please provide a name.
-              </div>
-
-			<br>
-
-              <label  class="emailz"for="exampleInputEmail1">Email address</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-				placeholder="Enter your email"
-				aria-describedby="inputGroupPrepend" required
-              />
-            </div>
-            <div class="form-group">
-              <label  class ="emailz"for="exampleInputPassword1">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="passwordInput"
-				placeholder="Create a password"
-				aria-describedby="inputGroupPrepend" required
-			  />
-
-			</div>
-            <div class="form-group">
-              <label  class="emailz"for="exampleInputPassword2">Verify Password</label>
-              <input
-                type="password"
-                class="form-control"
-                id="secondPassword"
-				placeholder="Verify your password"
-				aria-describedby="inputGroupPrepend" required
-			  />
-			
-
-			</div>
-            <div class="form-group">
-              <label  class="emailz"for="exampleInputPassword2">Enter Your Age</label>
-			  <input 
-			  type="number" 
-			  class="form-control"
-			  id="age-input"  
-			  value="18" 
-			  min="1" 
-			  max="100" 
-			  step="1"
-			  aria-describedby="inputGroupPrepend" required
-			  />
-</div>
-
-       
-<div class="form-group">
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" value="false" id="policyInput" required>
-    <label class="form-check-label" for="invalidCheck" id="termsConditions">
-	I agree to terms and conditions
-    </label>
-    <div class="invalid-feedback">
-      You must agree before submitting.
-    </div>
-  </div>
-</div>
-<button id="submitMe" type="submit" class="btn-default btn-sm" role="button" href="#" >Sign Up</button>
-
-
-            <div
-              style="display: none"
-              id="alert"
-              class="alert alert-danger"
-              role="alert"
+	<body>
+		<nav class="navbar navbar-expand-lg py-0 navbar-light bg-light">
+			<a class="navbar-brand" id="logo" href="index.html">Mindful</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarText"
+				aria-controls="navbarText"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
 			>
-			
-              <span
-                class="glyphicon glyphicon-exclamation-sign"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Error:</span> 
-              <!-- <span class="msg"></span> -->
-            </div>
-            <!-- <a id="submitMe" type="submit" class="btn-primary btn-sm" href="#" role="button">Sign Up</a> -->
-		</form>
-		<br>
-		<br>
-          <p id="changer">Or log in <a href="login.html">here</a></p>
-        </div>
-      </div>
-	</div>
-	<br>
-	<br>
-	<br>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">Log In</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-         $("#policyInput").on('change', function() {
-      if ($(this).is(':checked')) {
-        $(this).attr('value', 'true');
-      } else {
-        $(this).attr('value', 'false');     
-      }
-    });
+		<br />
+		<br />
 
-    </script>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h2 id="logins">Sign Up Form</h2>
+					<div class="alert">
+						<span
+							class="closebtn"
+							onclick="this.parentElement.style.display='none';"
+							>&times;</span
+						>
+						<h3>Information!</h3>
 
-	<script type="text/javascript" src="js/signup.js"></script>
-	
+						<p>
+							You should be able to signup or you can navigate to my github
+							account and use the existing Login info.
+							<a
+								href="https://github.com/moelak/self_improvment/blob/master/README.md"
+								target="_blank"
+								>https://github.com/moelak/self_improvment...</a
+							>
+						</p>
+					</div>
+
+					<form class="signup needs-validation" novalidate>
+						<div class="form-group">
+							<label
+								class="emailz"
+								for="exampleInput userName1"
+								aria-required="true"
+								>Anonymous Name</label
+							>
+							<input
+								type="text"
+								class="form-control"
+								id="userName"
+								placeholder="Create a user name"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+
+							<div class="invalid-feedback">
+								Please provide a name.
+							</div>
+
+							<br />
+
+							<label class="emailz" for="exampleInputEmail1"
+								>Email address</label
+							>
+							<input
+								type="email"
+								class="form-control"
+								id="email"
+								placeholder="Enter your email"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+
+						<div class="form-group">
+							<label class="emailz" for="exampleInputPassword1">Password</label>
+							<ol>
+								<li>Your password must be between 8 and 30 characters.</li>
+								<li>
+									Your password must contain lowercase or/and uppercase letter
+								</li>
+								<li>
+									Your password must contain at least one number digit
+								</li>
+
+								<li>
+									Your password must contain at least one special character
+								</li>
+							</ol>
+							<input
+								type="password"
+								class="form-control"
+								id="passwordInput"
+								placeholder="Create a password"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+
+						<div class="form-group">
+							<label class="emailz" for="exampleInputPassword2"
+								>Verify Password</label
+							>
+							<input
+								type="password"
+								class="form-control"
+								id="secondPassword"
+								placeholder="Verify your password"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+
+						<div class="form-group">
+							<label class="emailz" for="exampleInputPassword2"
+								>Enter Your Age</label
+							>
+							<input
+								type="number"
+								class="form-control"
+								id="age-input"
+								value="18"
+								min="1"
+								max="100"
+								step="1"
+								aria-describedby="inputGroupPrepend"
+								required
+							/>
+						</div>
+
+						<div class="form-group">
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="checkbox"
+									value="false"
+									id="policyInput"
+									required
+								/>
+								<label
+									class="form-check-label"
+									for="invalidCheck"
+									id="termsConditions"
+								>
+									I agree to terms and conditions
+								</label>
+								<div class="invalid-feedback">
+									You must agree before submitting.
+								</div>
+							</div>
+						</div>
+
+						<button
+							id="submitMe"
+							type="submit"
+							class="btn-default btn-sm"
+							role="button"
+							href="#"
+						>
+							Sign Up
+						</button>
+
+						<div
+							style="display: none"
+							id="alert"
+							class="alert alert-danger"
+							role="alert"
+						>
+							<span
+								class="glyphicon glyphicon-exclamation-sign"
+								aria-hidden="true"
+							></span>
+							<span class="sr-only">Error:</span>
+							<!-- <span class="msg"></span> -->
+						</div>
+						<!-- <a id="submitMe" type="submit" class="btn-primary btn-sm" href="#" role="button">Sign Up</a> -->
+					</form>
+
+					<br />
+					<br />
+					<p id="changer">Or log in <a href="login.html">here</a></p>
+				</div>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$('#policyInput').on('change', function() {
+				if ($(this).is(':checked')) {
+					$(this).attr('value', 'true');
+				} else {
+					$(this).attr('value', 'false');
+				}
+			});
+		</script>
+
+		<script type="text/javascript" src="js/signup.js"></script>
+
 		<script
 			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -192,8 +251,6 @@
 			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
 			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 			crossorigin="anonymous"
-    ></script>
-
- 
+		></script>
 	</body>
 </html>
