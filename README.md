@@ -7,6 +7,14 @@ Raise awareness on important issues
 Seek or offer emotional support during tough times
 Promotes learning.
 
+## contributors
+
+Mohammad Laknahour
+Emily Lee
+Will Rodgers
+Carter Hearst
+
+
 ## Demo
 
 https://powerful-reef-55363.herokuapp.com/login
