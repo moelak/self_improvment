@@ -9,10 +9,10 @@ Promotes learning.
 
 ## contributors
 
-Mohammad Laknahour
-Emily Lee
-Will Rodgers
-Carter Hearst
+* Mohammad Laknahour
+* Emily Lee
+* Will Rodgers
+* Carter Hearst
 
 
 ## Demo
